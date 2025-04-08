@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: url('../img/bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  padding-top: 75px;
+}
+
+.login-page {
+  height: calc(100vh - 90px);
+  padding-left: 5%;
+}
+
+.login-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  padding: 2rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-card input {
+  border-radius: 8px;
+}
+
+.login-card .btn {
+  border-radius: 8px;
+  padding: 10px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.login-card .btn:hover {
+  background-color: white;
+  color: #000;
+}
+
+::placeholder {
+  font-style: italic;
+  color: #ccc;
+}
+
+.navbar .btn {
+  font-weight: 500;
+  padding: 6px 16px;
+  border-radius: 6px;
+}

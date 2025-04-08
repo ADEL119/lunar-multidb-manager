@@ -1,16 +1,5 @@
 [
-  {
-    "type": "mariadb",
-    "host": "localhost",
-    "port": 3306,
-    "username": "testuser",
-    "password": "testpass",
-    "databaseName": "testdb",
-    "backupPath": "/home/adel/backups",
-    "dailyBackup": true,
-    "weeklyBackup": false,
-    "monthlyBackup": false
-  },
+
   {
     "type": "postgres",
     "host": "localhost",
@@ -18,10 +7,46 @@
     "username": "testpguser",
     "password": "testpgpass",
     "databaseName": "testpg",
-    "backupPath": "/home/adel/backups",
-    "dailyBackup": true,
-    "weeklyBackup": false,
-    "monthlyBackup": false
+    "backupPath": "/home/adel/Desktop/Backups/postgre",
+    "daily": true,
+    "weekly": true,
+    "monthly": false
+  },{
+  "type": "mariadb",
+  "host": "localhost",
+  "port": 3306,
+  "username": "testuser",
+  "password": "testpass",
+  "databaseName": "testdb",
+  "backupPath": "/home/adel/Desktop/Backups/maria",
+  "daily": true,
+  "weekly": false,
+  "monthly": true
+},
+  {
+    "type": "mongo",
+    "host": "localhost",
+    "port": 27017,
+    "authenticationDatabase": "admin",
+    "databaseName": "gestion_emp",
+    "username": "adminUser",
+    "password": "adminPassword",
+    "backupPath": "/home/adel/Desktop/Backups/mongo",
+    "daily": true,
+    "weekly": true,
+    "monthly": false
+  },
+  {
+    "type": "mysql",
+    "host": "localhost",
+    "port": 3306,
+    "username": "root",
+    "password": "adel",
+    "databaseName": "product",
+    "backupPath": "/home/adel/Desktop/Backups/mysql",
+    "daily": true,
+    "weekly": false,
+    "monthly": true
   }
 ]
 
