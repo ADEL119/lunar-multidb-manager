@@ -24,6 +24,9 @@ public class BackupService {
     @Autowired
     private BackupReportService backupReportService;
 
+    @Autowired
+    private MailService mailService;
+
     public void backupDatabase(DatabaseConfig config, String frequency) {
         try {
             String backupDirectoryPath = getBackupDirectoryPath(frequency, config);
@@ -96,11 +99,14 @@ public class BackupService {
             int exitCode = process.waitFor();
             if (exitCode == 0) {
                 System.out.println("Successful Backup: " + backupFilePath);
+
+                mailService.sendSimpleEmail("596anabal@fptct.net", "Backup Complete", "hey .");
                 backupReportService.addReport(new BackupReport(config.getDatabaseName(), config.getType(), frequency, backupFilePath, timestamp,"SUCCESS"));
 
             } else {
                 System.out.println("Failed Backup  for: " + config.getDatabaseName() + " ======> " + config.getType() );
                 backupReportService.addReport(new BackupReport(config.getDatabaseName(), config.getType(), frequency, "N/A", timestamp,"FAILED"));
+                mailService.sendSimpleEmail("596anabal@ptct.net", "Backup Complete", "hey .");
             }
 
         } catch ( Exception e) {

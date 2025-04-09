@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
@@ -46,6 +47,14 @@ public class BackupReportService {
         if (reportFile.exists()) {
             try {
                 List<BackupReport> loaded = mapper.readValue(reportFile, new TypeReference<>() {});
+//                List<BackupReport> loaded1 = new ArrayList<>();
+//                for(int i  = loaded.size();i>0;i--){
+//                    if(loaded1.size()<100) {
+//
+//                        loaded1.add(loaded.get(i - 1));
+//
+//                    }
+//                }
                 reports.addAll(loaded);
             } catch (IOException e) {
                 System.err.println("Failed to load backup reports: " + e.getMessage());
