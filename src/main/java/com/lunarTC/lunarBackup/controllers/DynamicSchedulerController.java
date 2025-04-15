@@ -3,7 +3,9 @@ package com.lunarTC.lunarBackup.controllers;
 import com.lunarTC.lunarBackup.configs.DatabaseConfigLoader;
 import com.lunarTC.lunarBackup.models.DatabaseConfig;
 import com.lunarTC.lunarBackup.models.DynamicCronRequest;
+import com.lunarTC.lunarBackup.scheduling.BackupScheduler;
 import com.lunarTC.lunarBackup.services.BackupService;
+
 import org.quartz.Scheduler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -23,6 +25,8 @@ public class DynamicSchedulerController {
     private Scheduler scheduler;
     @Autowired
     private BackupService backupService;
+    @Autowired
+    private BackupScheduler backupScheduler;
 
     @Autowired
     private DatabaseConfigLoader  databaseConfigLoader ;
@@ -48,7 +52,7 @@ public class DynamicSchedulerController {
             List<DatabaseConfig> configs = databaseConfigLoader.loadDatabaseConfigs();
             for (DatabaseConfig config : configs) {
 
-                backupService.scheduleDynamicBackupJob(scheduler, config, request.getCronExpression(), request.getFrequencyLabel());
+                backupScheduler.scheduleDynamicBackupJob(scheduler, config, request.getCronExpression(), request.getFrequencyLabel());
             }
             return ResponseEntity.ok("Dynamic backup jobs scheduled with cron: " + request.getCronExpression());
         } catch (Exception e) {
