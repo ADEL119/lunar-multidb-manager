@@ -1,23 +1,21 @@
 package com.lunarTC.lunarBackup.services;
 
-import com.lunarTC.lunarBackup.jobs.DynamicBackupJob;
+
 import com.lunarTC.lunarBackup.models.BackupReport;
 import com.lunarTC.lunarBackup.utils.DatabaseUtils;
 import com.lunarTC.lunarBackup.models.DatabaseConfig;
-import org.quartz.*;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.io.File;
-import java.io.IOException;
+
 import java.nio.file.Paths;
-import java.text.SimpleDateFormat;
+
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.UUID;
+
 
 
 
@@ -39,16 +37,18 @@ public class BackupService {
             if (!backupDir.exists()) {
                 backupDir.mkdirs();
             }
-            LocalDateTime timestamp = LocalDateTime.now();
+           LocalDateTime timestamp = LocalDateTime.now();
             String date = LocalDate.now().format(DateTimeFormatter.ofPattern("dd-MM-yyyy"));
-            String backupFilePath = Paths.get(backupDirectoryPath, config.getDatabaseName() + "_" + date).toString();
+            String backupFileName = Paths.get(backupDirectoryPath, config.getDatabaseName()).toString();
+
+
 
             ProcessBuilder processBuilder;
 
             switch (config.getType().toLowerCase()){
                 case "mysql":
                 case "mariadb": {
-                    backupFilePath += ".sql";
+                    backupFileName += ".sql";
                     String mysqldump = DatabaseUtils.getCachedDumpPath("mysqldump");
                     processBuilder = new ProcessBuilder(
                             mysqldump,
@@ -57,13 +57,13 @@ public class BackupService {
                             "-u", config.getUsername(),
                             "--password=" + config.getPassword(),
                             config.getDatabaseName(),
-                            "-r", backupFilePath
+                            "-r", backupFileName
                     );
                     break;
                 }
 
                 case "postgres": {
-                    backupFilePath += ".backup";
+                    backupFileName += ".backup";
                     String pgDump = DatabaseUtils.getCachedDumpPath("pg_dump");
                     processBuilder = new ProcessBuilder(
                             pgDump,
@@ -71,7 +71,7 @@ public class BackupService {
                             "-p", String.valueOf(config.getPort()),
                             "-U", config.getUsername(),
                             "-F", "c",
-                            "-f", backupFilePath,
+                            "-f", backupFileName,
                             config.getDatabaseName()
                     );
                     processBuilder.environment().put("PGPASSWORD", config.getPassword());
@@ -103,15 +103,15 @@ public class BackupService {
             Process process = processBuilder.start();
             int exitCode = process.waitFor();
             if (exitCode == 0) {
-                System.out.println("Successful Backup: " +frequency+"   :" +backupFilePath);
+                System.out.println("Successful Backup: " +frequency+"   :" +config.getType());
                 try {
-                    String html = mailService.buildBackupSuccessEmail(config.getDatabaseName(), config.getType(), frequency, backupFilePath);
+                    String html = mailService.buildBackupSuccessEmail(config.getDatabaseName(), config.getType(), frequency, backupFileName);
                     mailService.sendHtmlEmail("adelselmi8@gmail.com", "✅ Backup Completed", html);
 
                 } catch(Exception e){
                     System.out.println("Mail failed"+e.getMessage());
                 }
-                backupReportService.addReport(new BackupReport(config.getDatabaseName(), config.getType(), frequency, backupFilePath, timestamp,"SUCCESS"));
+                backupReportService.addReport(new BackupReport(config.getDatabaseName(), config.getType(), frequency, backupFileName, timestamp,"SUCCESS"));
                     return true;
             } else {
                 System.out.println("Failed Backup: " +frequency+"   :" + config.getDatabaseName() + " ======> " + config.getType() );

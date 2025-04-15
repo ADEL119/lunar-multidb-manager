@@ -20,6 +20,7 @@ public abstract class AbstractBackupJob implements Job {
     private DatabaseConfigLoader configLoader;
 
 
+
     @Override
     public void execute(JobExecutionContext context) throws JobExecutionException {
 
@@ -30,7 +31,9 @@ public abstract class AbstractBackupJob implements Job {
 
 
         for (DatabaseConfig config : databaseConfigs) {
+
             if (shouldRunBackup(config)) {
+
                 System.out.println("Running backup for: " + config.getDatabaseName());
                 boolean backupSucceeded= backupService.backupDatabase(config,getFrequency());
                 if(!backupSucceeded)
@@ -39,30 +42,51 @@ public abstract class AbstractBackupJob implements Job {
                         failedDatabases.add(config);
                     }                }
             }
+
         }
-        if(!failedDatabases.isEmpty()){
+
+        if( ! failedDatabases.isEmpty()){
             try {
-                System.out.println("There are "+failedDatabases.size()+" databases,retry them after 10 seconds");
-                Thread.sleep(10000); //10 seconds
+                System.out.println("There are "+failedDatabases.size()+" databases,retry them after 1 hour");
+                Thread.sleep(3000); //1 hour
             } catch (InterruptedException e) {
                 throw new RuntimeException("Retry sleep interrupted",e);
             }
-            int tries=0;
-            while(tries<10 && !failedDatabases.isEmpty()){
+
+            while( !failedDatabases.isEmpty()){
 
                 Iterator<DatabaseConfig> iterator = failedDatabases.iterator();
                 while (iterator.hasNext()) {
                     DatabaseConfig config = iterator.next();
                     if (shouldRunBackup(config)) {
-                        System.out.println("Retry backup for: " + config.getDatabaseName());
-                        boolean backupSucceeded = backupService.backupDatabase(config, getFrequency());
-                        if (backupSucceeded) {
-                            iterator.remove();
+                        int tries=0;
+                        while(tries<10 ) {
+                            System.out.println("Retry backup for: " + config.getDatabaseName());
+                            boolean backupSucceeded = backupService.backupDatabase(config, getFrequency());
+                            if (backupSucceeded) {
+                                iterator.remove();
+                                break;
+                            }
+                            tries++;
+                            try {
+                                Thread.sleep(1000);
+                            } catch (InterruptedException e) {
+                                throw new RuntimeException(e);
+                            }
+
+                        }
+                        if (tries>=10)
+                        {
+                          System.out.println("Max Retry reached for database:"+config.getDatabaseName());
+                          //should send mail here
+                          iterator.remove();
+
+
                         }
                     }
                 }
 
-                tries++;
+
 
             }
 
