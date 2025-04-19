@@ -1,52 +1,66 @@
-[
-
-  {
-    "type": "postgres",
-    "host": "localhost",
-    "port": 5432,
-    "username": "testpguser",
-    "password": "testpgpass",
-    "databaseName": "testpg",
-    "backupPath": "/home/adel/Desktop/Backups/postgre",
-    "daily": true,
-    "weekly": true,
-    "monthly": false
-  },{
-  "type": "mariadb",
-  "host": "localhost",
-  "port": 3306,
-  "username": "testuser",
-  "password": "testpass",
-  "databaseName": "testdb",
-  "backupPath": "/home/adel/Desktop/Backups/maria",
-  "daily": true,
-  "weekly": false,
-  "monthly": true
-},
-  {
-    "type": "mongo",
-    "host": "localhost",
-    "port": 27017,
-    "authenticationDatabase": "admin",
-    "databaseName": "gestion_emp",
-    "username": "adminUser",
-    "password": "adminPassword",
-    "backupPath": "/home/adel/Desktop/Backups/mongo",
-    "daily": true,
-    "weekly": true,
-    "monthly": false
+{
+  "notificationConfig": {
+    "notificationSummaryEmailToList": [
+      "selmi4454@gmail.com"
+    ],
+    "notificationEmailFrom": "adelselmi8@gmail.com",
+    "notificationSenderViewName": "Lunar DB Backup Notifications",
+    "notificationEmailPassword": "ogfy roqi plzy ffqh",
+    "notificationSmtpHost": "smtp.gmail.com",
+    "notificationSmtpPort": 587,
+    "notificationSmtpAuth": true,
+    "notificationStartTlsEnable": true
   },
-  {
-    "type": "mysql",
-    "host": "localhost",
-    "port": 3306,
-    "username": "root",
-    "password": "adel",
-    "databaseName": "product",
-    "backupPath": "/home/adel/Desktop/Backups/mysql",
-    "daily": true,
-    "weekly": false,
-    "monthly": true
-  }
-]
+  "databaseConfigList": [
+    {
+      "type": "postgres",
+      "host": "localhost",
+      "port": 5432,
+      "username": "testpguser",
+      "password": "testpgpass",
+      "databaseName": "testpg",
+      "backupPath": "/home/adel/Desktop/Backups/postgre",
+      "daily": true,
+      "weekly": true,
+      "monthly": false
+    },
+    {
+      "type": "mariadb",
+      "host": "localhost",
+      "port": 3306,
+      "username": "testuser",
+      "password": "testpass",
+      "databaseName": "testdb",
+      "backupPath": "/home/adel/Desktop/Backups/maria",
+      "daily": true,
+      "weekly": false,
+      "monthly": true
+    },
+    {
+      "type": "mongo",
+      "host": "localhost",
+      "port": 27017,
+      "authenticationDatabase": "admin",
+      "databaseName": "gestion_emp",
+      "username": "adminUser",
+      "password": "adminPassword",
+      "backupPath": "/home/adel/Desktop/Backups/mongo",
+      "daily": true,
+      "weekly": true,
+      "monthly": false
+    },
+    {
+      "type": "mysql",
+      "host": "localhost",
+      "port": 3306,
+      "username": "root",
+      "password": "adel",
+      "databaseName": "product",
+      "backupPath": "/home/adel/Desktop/Backups/mysql",
+      "daily": true,
+      "weekly": false,
+      "monthly": true
+    }
+  ]
+}
 

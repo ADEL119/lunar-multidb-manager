@@ -46,7 +46,7 @@ public class DatabaseUtils {
         };
     }
 
-    public static String getBackupDirectoryPath(String frequency, DatabaseConfig config) {
+    public static String getBackupDirectoryPath(DatabaseConfig config,String frequency) {
         String basePath = config.getBackupPath();
         Calendar calendar = Calendar.getInstance();
         Date now = new Date();

@@ -1,6 +1,6 @@
 package com.lunarTC.lunarBackup.jobs;
 
-import com.lunarTC.lunarBackup.configs.DatabaseConfigLoader;
+import com.lunarTC.lunarBackup.configs.GlobalConfigLoader;
 import com.lunarTC.lunarBackup.models.DatabaseConfig;
 import com.lunarTC.lunarBackup.services.BackupService;
 import org.quartz.Job;
@@ -17,7 +17,7 @@ public abstract class AbstractBackupJob implements Job {
     @Autowired
     private BackupService backupService;
     @Autowired
-    private DatabaseConfigLoader configLoader;
+    private GlobalConfigLoader globalConfigLoader;
 
 
 
@@ -25,7 +25,7 @@ public abstract class AbstractBackupJob implements Job {
     public void execute(JobExecutionContext context) throws JobExecutionException {
 
 
-        List<DatabaseConfig> databaseConfigs = configLoader.loadDatabaseConfigs();
+        List<DatabaseConfig> databaseConfigs = globalConfigLoader.loadGlobalConfig().getDatabaseConfigList();
         List<DatabaseConfig> failedDatabases=new ArrayList<>();
 
 
@@ -35,7 +35,7 @@ public abstract class AbstractBackupJob implements Job {
             if (shouldRunBackup(config)) {
 
                 System.out.println("Running backup for: " + config.getDatabaseName());
-                boolean backupSucceeded= backupService.backupDatabase(config,getFrequency());
+                boolean backupSucceeded= backupService.backupDatabase(config, getBackupType());
                 if(!backupSucceeded)
                 {
                     if(!failedDatabases.contains(config)) {
@@ -62,7 +62,7 @@ public abstract class AbstractBackupJob implements Job {
                         int tries=0;
                         while(tries<10 ) {
                             System.out.println("Retry backup for: " + config.getDatabaseName());
-                            boolean backupSucceeded = backupService.backupDatabase(config, getFrequency());
+                            boolean backupSucceeded = backupService.backupDatabase(config, getBackupType());
                             if (backupSucceeded) {
                                 iterator.remove();
                                 break;
@@ -87,7 +87,6 @@ public abstract class AbstractBackupJob implements Job {
                 }
 
 
-
             }
 
 
@@ -97,6 +96,6 @@ public abstract class AbstractBackupJob implements Job {
     }
 
     protected abstract boolean shouldRunBackup(DatabaseConfig config);
-    protected abstract String getFrequency();  // new method
+    protected abstract String getBackupType();  // new method
 
 }

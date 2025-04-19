@@ -2,6 +2,7 @@ package com.lunarTC.lunarBackup.configs;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.lunarTC.lunarBackup.models.DatabaseConfig;
+import com.lunarTC.lunarBackup.models.GlobalConfig;
 import org.springframework.stereotype.Service;
 
 import java.io.File;
@@ -10,9 +11,9 @@ import java.nio.file.Paths;
 import java.util.List;
 
 @Service
-public class DatabaseConfigLoader {
+public class GlobalConfigLoader {
 
-    public List<DatabaseConfig> loadDatabaseConfigs() {
+    public GlobalConfig loadGlobalConfig() {
         try {
             File jarDir = new File(Paths.get("").toAbsolutePath().toString());
             File configFile = new File(jarDir, "config.json");
@@ -22,8 +23,7 @@ public class DatabaseConfigLoader {
             }
 
             ObjectMapper objectMapper = new ObjectMapper();
-            return objectMapper.readValue(configFile,
-                    objectMapper.getTypeFactory().constructCollectionType(List.class, DatabaseConfig.class));
+            return objectMapper.readValue(configFile,GlobalConfig.class);
 
         } catch (IOException e) {
             throw new RuntimeException("Error reading configuration file", e);

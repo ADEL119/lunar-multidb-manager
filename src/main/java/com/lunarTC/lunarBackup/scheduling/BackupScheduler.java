@@ -20,8 +20,8 @@ public class BackupScheduler {
 
     @PostConstruct
     public void schedulePredefinedBackups() throws SchedulerException {
-        scheduleBackup(DailyBackupJob.class, "daily", "0 0/10 * * * ?");    // Every 2 minute
-        scheduleBackup(WeeklyBackupJob.class, "weekly", "0 0/50 * * * ?");  // Every 10 minutes
+        scheduleBackup(DailyBackupJob.class, "daily", "0 0/1 * * * ?");    // Every 2 minute
+        scheduleBackup(WeeklyBackupJob.class, "weekly", "0 0/2 * * * ?");  // Every 10 minutes
         scheduleBackup(MonthlyBackupJob.class, "monthly", "0 0/50 * * * ?"); // Every 30 minutes
     }
 

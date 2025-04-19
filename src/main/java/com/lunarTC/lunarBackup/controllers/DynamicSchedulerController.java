@@ -1,6 +1,6 @@
 package com.lunarTC.lunarBackup.controllers;
 
-import com.lunarTC.lunarBackup.configs.DatabaseConfigLoader;
+import com.lunarTC.lunarBackup.configs.GlobalConfigLoader;
 import com.lunarTC.lunarBackup.models.DatabaseConfig;
 import com.lunarTC.lunarBackup.models.DynamicCronRequest;
 import com.lunarTC.lunarBackup.scheduling.BackupScheduler;
@@ -29,12 +29,12 @@ public class DynamicSchedulerController {
     private BackupScheduler backupScheduler;
 
     @Autowired
-    private DatabaseConfigLoader  databaseConfigLoader ;
+    private GlobalConfigLoader globalConfigLoader;
 
     @PostMapping("/backup-now")
     public ResponseEntity<String> triggerImmediateBackupForAll() {
         try {
-            List<DatabaseConfig> configs = databaseConfigLoader.loadDatabaseConfigs();
+            List<DatabaseConfig> configs = globalConfigLoader.loadGlobalConfig().getDatabaseConfigList();
             for (DatabaseConfig config : configs) {
                 backupService.backupDatabase(config, "Manual");
             }
@@ -49,7 +49,7 @@ public class DynamicSchedulerController {
     @PostMapping("/schedule-dynamic")
     public ResponseEntity<String> scheduleDynamicCronBackup(@RequestBody DynamicCronRequest request) {
         try {
-            List<DatabaseConfig> configs = databaseConfigLoader.loadDatabaseConfigs();
+            List<DatabaseConfig> configs = globalConfigLoader.loadGlobalConfig().getDatabaseConfigList();
             for (DatabaseConfig config : configs) {
 
                 backupScheduler.scheduleDynamicBackupJob(scheduler, config, request.getCronExpression(), request.getFrequencyLabel());

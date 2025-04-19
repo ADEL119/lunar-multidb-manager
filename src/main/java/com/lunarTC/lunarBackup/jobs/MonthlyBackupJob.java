@@ -12,7 +12,7 @@ public class MonthlyBackupJob extends AbstractBackupJob {
         return config.getMonthly();
     }
     @Override
-    protected String getFrequency() {
+    protected String getBackupType() {
         return "monthly";
     }
 

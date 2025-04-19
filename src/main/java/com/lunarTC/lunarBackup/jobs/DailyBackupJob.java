@@ -12,7 +12,7 @@ public class DailyBackupJob extends AbstractBackupJob {
         return config.getDaily();
     }
     @Override
-    protected String getFrequency() {
+    protected String getBackupType() {
         return "daily";
     }
 

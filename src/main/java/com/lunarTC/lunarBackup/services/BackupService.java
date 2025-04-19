@@ -30,9 +30,9 @@ public class BackupService {
     private MailService mailService;
 
 
-    public Boolean backupDatabase(DatabaseConfig config, String frequency) {
+    public Boolean backupDatabase(DatabaseConfig config, String backupType) {
         try {
-            String backupDirectoryPath = DatabaseUtils.getBackupDirectoryPath(frequency, config);
+            String backupDirectoryPath = DatabaseUtils.getBackupDirectoryPath(config,backupType);
             File backupDir = new File(backupDirectoryPath);
             if (!backupDir.exists()) {
                 backupDir.mkdirs();
@@ -80,22 +80,35 @@ public class BackupService {
 
                 case "mongo": {
                     String mongoDump = DatabaseUtils.getCachedDumpPath("mongodump");
-                    processBuilder = new ProcessBuilder(
-                            mongoDump,
-                            "--host", config.getHost(),
-                            "--port", String.valueOf(config.getPort()),
-                            "-u", config.getUsername(),
-                            "-p", config.getPassword(),
-                            "--authenticationDatabase", config.getAuthenticationDatabase(),
-                            "--db", config.getDatabaseName(),
-                            "--out", backupDirectoryPath
-                    );
+
+                    // Start building the base command
+                    StringBuilder commandBuilder = new StringBuilder();
+                    commandBuilder.append(mongoDump).append(" ")
+                            .append("--host ").append(config.getHost()).append(" ")
+                            .append("--port ").append(config.getPort()).append(" ")
+                            .append("-u ").append(config.getUsername()).append(" ")
+                            .append("-p ").append(config.getPassword()).append(" ")
+                            .append("--authenticationDatabase ").append(config.getAuthenticationDatabase()).append(" ")
+                            .append("--db ").append(config.getDatabaseName()).append(" ")
+                            .append("--out ").append(backupDirectoryPath).append(" ");
+
+                    // Exclude large collections if any
+                    if (config.getLargeCollections() != null && !config.getLargeCollections().isEmpty()) {
+                        for (String collection : config.getLargeCollections()) {
+                            commandBuilder.append("--excludeCollection=").append(collection).append(" ");
+                        }
+                    }
+
+                    // Convert to command array for ProcessBuilder
+                    String[] command = commandBuilder.toString().trim().split("\\s+");
+
+                    processBuilder = new ProcessBuilder(command);
                     break;
                 }
 
 
                 default:
-                    System.out.println("Unsupported database type: " + config.getType()+". Skipping backup");
+                    System.out.println("Unsupported database backupType: " + config.getType()+". Skipping backup");
                     return true;
             }
 
@@ -103,24 +116,24 @@ public class BackupService {
             Process process = processBuilder.start();
             int exitCode = process.waitFor();
             if (exitCode == 0) {
-                System.out.println("Successful Backup: " +frequency+"   :" +config.getType());
+                System.out.println("Successful Backup: " +backupType+"   :" +config.getType());
                 try {
-                    String html = mailService.buildBackupSuccessEmail(config.getDatabaseName(), config.getType(), frequency, backupFileName);
+                    String html = mailService.buildBackupSuccessEmail(config.getDatabaseName(), config.getType(), backupType, backupFileName);
                     mailService.sendHtmlEmail("adelselmi8@gmail.com", "✅ Backup Completed", html);
 
                 } catch(Exception e){
                     System.out.println("Mail failed"+e.getMessage());
                 }
-                backupReportService.addReport(new BackupReport(config.getDatabaseName(), config.getType(), frequency, backupFileName, timestamp,"SUCCESS"));
+                backupReportService.addReport(new BackupReport(config.getDatabaseName(), config.getType(), backupType, backupFileName, timestamp,"SUCCESS"));
                     return true;
             } else {
-                System.out.println("Failed Backup: " +frequency+"   :" + config.getDatabaseName() + " ======> " + config.getType() );
-                backupReportService.addReport(new BackupReport(config.getDatabaseName(), config.getType(), frequency, "N/A", timestamp,"FAILED"));
+                System.out.println("Failed Backup: " +backupType+"   :" + config.getDatabaseName() + " ======> " + config.getType() );
+                backupReportService.addReport(new BackupReport(config.getDatabaseName(), config.getType(), backupType, "N/A", timestamp,"FAILED"));
                 try {
                     String errorBody = mailService.buildBackupFailureEmail(
                             config.getDatabaseName(),
                             config.getType(),
-                            frequency,
+                            backupType,
                             "Exit code != 0 or dump process failed."
                     );
 

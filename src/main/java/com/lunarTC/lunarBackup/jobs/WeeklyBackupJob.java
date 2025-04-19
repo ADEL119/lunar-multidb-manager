@@ -12,7 +12,7 @@ public class WeeklyBackupJob extends AbstractBackupJob {
         return config.getWeekly();
     }
     @Override
-    protected String getFrequency() {
+    protected String getBackupType() {
         return "weekly";
     }
 }

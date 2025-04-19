@@ -4,6 +4,8 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 @Data
 @JsonInclude(JsonInclude.Include.NON_NULL) // Ignore null fields in JSON
@@ -18,6 +20,9 @@ public class DatabaseConfig implements Serializable {
     private String password;
     private String authenticationDatabase;
     private String backupPath;
+    private List<String> largeCollections=new ArrayList<>();
+    private Boolean backupLargeCollections=true;
+    private List<String> emailList=new ArrayList<>();
     private Boolean daily = true;
     private Boolean weekly = true;
     private Boolean monthly = true;
