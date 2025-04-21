@@ -22,5 +22,7 @@ public class BackupReport {
         this.filePath = filePath;
         this.timestamp = timestamp;
         this.status = status;
+
+        //
     }
 }
