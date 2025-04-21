@@ -152,4 +152,214 @@
   "filePath" : "N/A",
   "timestamp" : [ 2025, 4, 19, 9, 27, 34, 679081039 ],
   "status" : "FAILED"
+}, {
+  "databaseName" : "testpg",
+  "type" : "postgres",
+  "frequency" : "weekly",
+  "filePath" : "/home/adel/Desktop/Backups/postgre/Weekly/Week4/testpg.backup",
+  "timestamp" : [ 2025, 4, 21, 11, 26, 0, 14012764 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testpg",
+  "type" : "postgres",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/Backups/postgre/Daily/1-Lundi/testpg.backup",
+  "timestamp" : [ 2025, 4, 21, 11, 26, 0, 14101553 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 21, 11, 26, 2, 552102380 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "weekly",
+  "filePath" : "/home/adel/Desktop/Backups/mongo/Weekly/Week4/gestion_emp",
+  "timestamp" : [ 2025, 4, 21, 11, 26, 2, 418234179 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/Backups/mongo/Daily/1-Lundi/gestion_emp",
+  "timestamp" : [ 2025, 4, 21, 11, 26, 3, 957199291 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "product",
+  "type" : "mysql",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/Backups/mysql/Daily/1-Lundi/product.sql",
+  "timestamp" : [ 2025, 4, 21, 11, 26, 6, 286450991 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 21, 11, 26, 10, 726296189 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 21, 11, 26, 14, 154165803 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 21, 11, 26, 16, 632239767 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 21, 11, 26, 19, 72179639 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 21, 11, 26, 21, 644097845 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 21, 11, 26, 24, 181904626 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 21, 11, 26, 26, 749724443 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 21, 11, 26, 29, 200935382 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 21, 11, 26, 31, 886498154 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 21, 11, 26, 34, 117426936 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testpg",
+  "type" : "postgres",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/Backups/postgre/Daily/1-Lundi/testpg.backup",
+  "timestamp" : [ 2025, 4, 21, 11, 27, 0, 5424113 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 21, 11, 27, 1, 893633447 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/Backups/mongo/Daily/1-Lundi/gestion_emp",
+  "timestamp" : [ 2025, 4, 21, 11, 27, 3, 584982634 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "product",
+  "type" : "mysql",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/Backups/mysql/Daily/1-Lundi/product.sql",
+  "timestamp" : [ 2025, 4, 21, 11, 27, 5, 169183206 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 21, 11, 27, 9, 806366433 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 21, 11, 27, 12, 316380538 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 21, 11, 27, 14, 767657081 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 21, 11, 27, 17, 274383102 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 21, 11, 27, 19, 598103277 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 21, 11, 27, 22, 40326132 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 21, 11, 27, 25, 505525174 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 21, 11, 27, 27, 886441300 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 21, 11, 27, 30, 244881401 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 21, 11, 27, 32, 590775772 ],
+  "status" : "FAILED"
 } ]
