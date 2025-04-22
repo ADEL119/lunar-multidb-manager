@@ -38,7 +38,6 @@ public class BackupService {
                 backupDir.mkdirs();
             }
            LocalDateTime timestamp = LocalDateTime.now();
-            String date = LocalDate.now().format(DateTimeFormatter.ofPattern("dd-MM-yyyy"));
             String backupFileName = Paths.get(backupDirectoryPath, config.getDatabaseName()).toString();
 
 

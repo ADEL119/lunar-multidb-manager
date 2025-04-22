@@ -47,7 +47,7 @@ public class LargeCollectionBackupJob implements Job{
         }
         if (!failedDatabases.isEmpty()) {
             try {
-                System.out.println("There are " + failedDatabases.size() + " failed large collections,retry them after 1 hour");
+                System.out.println("There are " + failedDatabases.size() + " failed database(s) with large collections,retry them after 1 hour");
                 Thread.sleep(3000); //1 hour
             } catch (InterruptedException e) {
                 throw new RuntimeException("Retry sleep interrupted", e);
