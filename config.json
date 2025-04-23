@@ -19,7 +19,7 @@
       "username": "testpguser",
       "password": "testpgpass",
       "databaseName": "testpg",
-      "backupPath": "/home/adel/Desktop/Backups/postgre",
+      "backupPath": "/home/adel/Desktop/tryBackups/testpg",
       "daily": true,
       "weekly": true,
       "monthly": false
@@ -31,7 +31,7 @@
       "username": "testuser",
       "password": "testpass",
       "databaseName": "testdb",
-      "backupPath": "/home/adel/Desktop/Backups/maria",
+      "backupPath": "/home/adel/Desktop/tryBackups/testdb",
       "daily": true,
       "weekly": false,
       "monthly": true
@@ -44,7 +44,12 @@
       "databaseName": "gestion_emp",
       "username": "adminUser",
       "password": "adminPassword",
-      "backupPath": "/home/adel/Desktop/Backups/mongo",
+      "backupPath": "/home/adel/Desktop/tryBackups/gestion_emp",
+      "largeCollections": [
+        "employees",
+        "departments"
+      ],
+      "backupLargeCollections": true,
       "daily": true,
       "weekly": true,
       "monthly": false
@@ -56,7 +61,7 @@
       "username": "root",
       "password": "adel",
       "databaseName": "product",
-      "backupPath": "/home/adel/Desktop/Backups/mysql",
+      "backupPath": "/home/adel/Desktop/tryBackups/product",
       "daily": true,
       "weekly": false,
       "monthly": true
