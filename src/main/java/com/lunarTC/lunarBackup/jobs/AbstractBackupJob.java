@@ -75,7 +75,7 @@ public abstract class AbstractBackupJob implements Job {
                             }
 
                         }
-                        if (tries>=10)
+                        if (tries>=3)
                         {
                           System.out.println("Max Retry reached for database:"+config.getDatabaseName());
                           //should send mail here
