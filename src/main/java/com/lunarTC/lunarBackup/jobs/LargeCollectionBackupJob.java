@@ -60,7 +60,7 @@ public class LargeCollectionBackupJob implements Job{
                     DatabaseConfig config = iterator.next();
                     if( shouldRunLargeCollections(config)) {
                         int tries = 0;
-                        while (tries < 10) {
+                        while (tries < 3) {
                             System.out.println("Retry backup for: " + config.getDatabaseName());
                             boolean backupSucceeded = largeCollectionsBackupService.backupLargeCollections(config, "Large_Collections");
                             if (backupSucceeded) {
@@ -90,14 +90,6 @@ public class LargeCollectionBackupJob implements Job{
 
 
         }
-
-
-
-
-
-
-
-
 
 
 

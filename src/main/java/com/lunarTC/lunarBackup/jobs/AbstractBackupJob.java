@@ -48,7 +48,7 @@ public abstract class AbstractBackupJob implements Job {
         if( ! failedDatabases.isEmpty()){
             try {
                 System.out.println("There are "+failedDatabases.size()+" databases,retry them after 1 hour");
-                Thread.sleep(3000); //1 hour
+                Thread.sleep(20000); //1 hour
             } catch (InterruptedException e) {
                 throw new RuntimeException("Retry sleep interrupted",e);
             }
@@ -60,7 +60,7 @@ public abstract class AbstractBackupJob implements Job {
                     DatabaseConfig config = iterator.next();
                     if (shouldRunBackup(config)) {
                         int tries=0;
-                        while(tries<10 ) {
+                        while(tries<3 ) {
                             System.out.println("Retry backup for: " + config.getDatabaseName());
                             boolean backupSucceeded = backupService.backupDatabase(config, getBackupType());
                             if (backupSucceeded) {
@@ -69,7 +69,7 @@ public abstract class AbstractBackupJob implements Job {
                             }
                             tries++;
                             try {
-                                Thread.sleep(1000);
+                                Thread.sleep(10000);
                             } catch (InterruptedException e) {
                                 throw new RuntimeException(e);
                             }

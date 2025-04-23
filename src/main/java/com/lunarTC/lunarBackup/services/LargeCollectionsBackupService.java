@@ -73,6 +73,8 @@ public class LargeCollectionsBackupService {
                 int exitCode = process.waitFor();
                 if (exitCode == 0) {
                     System.out.println("✅ Backup succeeded for collection: " + collection);
+                    backupReportService.addReport(new BackupReport(config.getDatabaseName(), config.getType(), backupType, backupDirectoryPath, timestamp,"SUCCESS"));
+
                 } else {
                     System.err.println("❌ Backup failed for collection: " + collection);
                     backupReportService.addReport(new BackupReport(config.getDatabaseName(), config.getType(), backupType, "N/A", timestamp,"FAILED"));
