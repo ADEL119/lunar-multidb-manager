@@ -44,7 +44,7 @@
       "databaseName": "gestion_emp",
       "username": "adminUser",
       "password": "adminPassword",
-      "backupPath": "/home/adel/Desktop/tryBackups/gestion_emp",
+      "backupPath": "/home/adel/Desktop/doubleDB/gestion_emp",
       "largeCollections": [
         "employees",
         "departments"
@@ -53,7 +53,22 @@
       "daily": true,
       "weekly": true,
       "monthly": false
+    },{
+      "type": "mongo",
+      "host": "localhost",
+      "port": 27017,
+      "authenticationDatabase": "admin",
+      "databaseName": "location",
+      "username": "adminUser",
+      "password": "adminPassword",
+      "backupPath": "/home/adel/Desktop/doubleDB/location",
+      "largeCollections": [],
+      "backupLargeCollections": true,
+      "daily": true,
+      "weekly": false,
+      "monthly": false
     },
+
     {
       "type": "mysql",
       "host": "localhost",

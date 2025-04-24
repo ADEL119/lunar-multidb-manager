@@ -34,6 +34,15 @@ public class BackupReportService {
     public List<BackupReport> getAllReports() {
         return List.copyOf(reports); // return read-only copy
     }
+    public List<BackupReport> getSuccessfulReports() {
+        List<BackupReport> successful = new ArrayList<>();
+        for (BackupReport report : reports) {
+            if ("SUCCESS".equalsIgnoreCase(report.getStatus())) {
+                successful.add(report);
+            }
+        }
+        return successful;
+    }
 
     private void saveReportsToFile() {
         try {

@@ -18,4 +18,9 @@ public class BackupReportController {
     public List<BackupReport> getAllReports() {
         return backupReportService.getAllReports();
     }
+
+    @GetMapping("/success")
+    public List<BackupReport> getSuccessfulReports(){
+        return backupReportService.getSuccessfulReports();
+    }
 }

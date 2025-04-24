@@ -131,4 +131,3119 @@
   "filePath" : "N/A",
   "timestamp" : [ 2025, 4, 23, 13, 27, 35, 115142000 ],
   "status" : "FAILED"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "Large_Collections",
+  "filePath" : "/home/adel/Desktop/tryBackups/gestion_emp/Large_Collections",
+  "timestamp" : [ 2025, 4, 23, 14, 45, 0, 17194585 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testpg",
+  "type" : "postgres",
+  "frequency" : "weekly",
+  "filePath" : "/home/adel/Desktop/tryBackups/testpg/Weekly/Week4/testpg.backup",
+  "timestamp" : [ 2025, 4, 23, 14, 45, 0, 17723490 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "Large_Collections",
+  "filePath" : "/home/adel/Desktop/tryBackups/gestion_emp/Large_Collections",
+  "timestamp" : [ 2025, 4, 23, 14, 45, 0, 17194585 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "weekly",
+  "filePath" : "/home/adel/Desktop/tryBackups/gestion_emp/Weekly/Week4/gestion_emp",
+  "timestamp" : [ 2025, 4, 23, 14, 45, 2, 299126568 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testpg",
+  "type" : "postgres",
+  "frequency" : "Manual",
+  "filePath" : "/home/adel/Desktop/tryBackups/testpg/Manual/testpg.backup",
+  "timestamp" : [ 2025, 4, 23, 14, 46, 49, 949494060 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Manual",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 23, 14, 46, 51, 901629469 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "Manual",
+  "filePath" : "/home/adel/Desktop/tryBackups/gestion_emp/Manual/gestion_emp",
+  "timestamp" : [ 2025, 4, 23, 14, 46, 53, 507574887 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "product",
+  "type" : "mysql",
+  "frequency" : "Manual",
+  "filePath" : "/home/adel/Desktop/tryBackups/product/Manual/product.sql",
+  "timestamp" : [ 2025, 4, 23, 14, 46, 54, 907485248 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "Large_Collections",
+  "filePath" : "/home/adel/Desktop/tryBackups/gestion_emp/Large_Collections",
+  "timestamp" : [ 2025, 4, 23, 14, 47, 0, 9489522 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testpg",
+  "type" : "postgres",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/tryBackups/testpg/Daily/4-Jeudi/testpg.backup",
+  "timestamp" : [ 2025, 4, 24, 7, 37, 0, 18807516 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 7, 37, 2, 768549490 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/tryBackups/gestion_emp/Daily/4-Jeudi/gestion_emp",
+  "timestamp" : [ 2025, 4, 24, 7, 37, 5, 110620885 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "product",
+  "type" : "mysql",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/tryBackups/product/Daily/4-Jeudi/product.sql",
+  "timestamp" : [ 2025, 4, 24, 7, 37, 7, 648607812 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 7, 37, 30, 511003361 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 7, 37, 42, 732895797 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 7, 37, 55, 396877841 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testpg",
+  "type" : "postgres",
+  "frequency" : "weekly",
+  "filePath" : "/home/adel/Desktop/tryBackups/testpg/Weekly/Week4/testpg.backup",
+  "timestamp" : [ 2025, 4, 24, 7, 38, 0, 5150859 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "weekly",
+  "filePath" : "/home/adel/Desktop/tryBackups/gestion_emp/Weekly/Week4/gestion_emp",
+  "timestamp" : [ 2025, 4, 24, 7, 38, 6, 422607404 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testpg",
+  "type" : "postgres",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/tryBackups/testpg/Daily/4-Jeudi/testpg.backup",
+  "timestamp" : [ 2025, 4, 24, 7, 38, 17, 350575132 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 7, 38, 20, 643292256 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/tryBackups/gestion_emp/Daily/4-Jeudi/gestion_emp",
+  "timestamp" : [ 2025, 4, 24, 7, 38, 24, 741946138 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "product",
+  "type" : "mysql",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/tryBackups/product/Daily/4-Jeudi/product.sql",
+  "timestamp" : [ 2025, 4, 24, 7, 38, 27, 480204330 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 7, 38, 50, 158013781 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "monthly",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 7, 39, 0, 6915837 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 7, 39, 2, 32059290 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "product",
+  "type" : "mysql",
+  "frequency" : "monthly",
+  "filePath" : "/home/adel/Desktop/tryBackups/product/Monthly/4-Avril/product.sql",
+  "timestamp" : [ 2025, 4, 24, 7, 39, 3, 656424655 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 7, 39, 16, 82012990 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "monthly",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 7, 39, 26, 79543072 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testpg",
+  "type" : "postgres",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/tryBackups/testpg/Daily/4-Jeudi/testpg.backup",
+  "timestamp" : [ 2025, 4, 24, 7, 39, 28, 504278186 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 7, 39, 31, 710877810 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "monthly",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 7, 39, 37, 982455418 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/tryBackups/gestion_emp/Daily/4-Jeudi/gestion_emp",
+  "timestamp" : [ 2025, 4, 24, 7, 39, 34, 264288355 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "product",
+  "type" : "mysql",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/tryBackups/product/Daily/4-Jeudi/product.sql",
+  "timestamp" : [ 2025, 4, 24, 7, 39, 37, 995473358 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "monthly",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 7, 39, 50, 523642799 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "Large_Collections",
+  "filePath" : "/home/adel/Desktop/tryBackups/gestion_emp/Large_Collections",
+  "timestamp" : [ 2025, 4, 24, 7, 40, 0, 5439749 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 7, 40, 0, 571886379 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testpg",
+  "type" : "postgres",
+  "frequency" : "weekly",
+  "filePath" : "/home/adel/Desktop/tryBackups/testpg/Weekly/Week4/testpg.backup",
+  "timestamp" : [ 2025, 4, 24, 7, 40, 0, 5526184 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "Large_Collections",
+  "filePath" : "/home/adel/Desktop/tryBackups/gestion_emp/Large_Collections",
+  "timestamp" : [ 2025, 4, 24, 7, 40, 0, 5439749 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "weekly",
+  "filePath" : "/home/adel/Desktop/tryBackups/gestion_emp/Weekly/Week4/gestion_emp",
+  "timestamp" : [ 2025, 4, 24, 7, 40, 2, 380368524 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 7, 40, 12, 415614984 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 7, 40, 26, 99148774 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testpg",
+  "type" : "postgres",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/tryBackups/testpg/Daily/4-Jeudi/testpg.backup",
+  "timestamp" : [ 2025, 4, 24, 7, 40, 38, 593513249 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 7, 40, 41, 424089931 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/tryBackups/gestion_emp/Daily/4-Jeudi/gestion_emp",
+  "timestamp" : [ 2025, 4, 24, 7, 40, 44, 662344800 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "product",
+  "type" : "mysql",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/tryBackups/product/Daily/4-Jeudi/product.sql",
+  "timestamp" : [ 2025, 4, 24, 7, 40, 46, 609111864 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 7, 41, 8, 956010403 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 7, 41, 22, 306447938 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 7, 41, 34, 424132019 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testpg",
+  "type" : "postgres",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/tryBackups/testpg/Daily/4-Jeudi/testpg.backup",
+  "timestamp" : [ 2025, 4, 24, 7, 41, 48, 970066668 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 7, 41, 52, 376348163 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/tryBackups/gestion_emp/Daily/4-Jeudi/gestion_emp",
+  "timestamp" : [ 2025, 4, 24, 7, 41, 56, 163668708 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "monthly",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 7, 42, 0, 4631445 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "product",
+  "type" : "mysql",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/tryBackups/product/Daily/4-Jeudi/product.sql",
+  "timestamp" : [ 2025, 4, 24, 7, 41, 58, 520496641 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testpg",
+  "type" : "postgres",
+  "frequency" : "weekly",
+  "filePath" : "/home/adel/Desktop/tryBackups/testpg/Weekly/Week4/testpg.backup",
+  "timestamp" : [ 2025, 4, 24, 7, 42, 0, 4276818 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "weekly",
+  "filePath" : "/home/adel/Desktop/tryBackups/gestion_emp/Weekly/Week4/gestion_emp",
+  "timestamp" : [ 2025, 4, 24, 7, 42, 2, 96996374 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "product",
+  "type" : "mysql",
+  "frequency" : "monthly",
+  "filePath" : "/home/adel/Desktop/tryBackups/product/Monthly/4-Avril/product.sql",
+  "timestamp" : [ 2025, 4, 24, 7, 42, 1, 671714560 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 7, 42, 20, 415857433 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "monthly",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 7, 42, 24, 220682997 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 7, 42, 32, 849015864 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "monthly",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 7, 42, 36, 266611114 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 7, 42, 45, 344233124 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "monthly",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 7, 42, 48, 146067056 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testpg",
+  "type" : "postgres",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/tryBackups/testpg/Daily/4-Jeudi/testpg.backup",
+  "timestamp" : [ 2025, 4, 24, 7, 42, 57, 325332515 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 7, 43, 0, 568301476 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/tryBackups/gestion_emp/Daily/4-Jeudi/gestion_emp",
+  "timestamp" : [ 2025, 4, 24, 7, 43, 2, 886820887 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "product",
+  "type" : "mysql",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/tryBackups/product/Daily/4-Jeudi/product.sql",
+  "timestamp" : [ 2025, 4, 24, 7, 43, 5, 443853029 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 7, 43, 27, 322200023 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 7, 43, 39, 802290754 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "Large_Collections",
+  "filePath" : "/home/adel/Desktop/tryBackups/gestion_emp/Large_Collections",
+  "timestamp" : [ 2025, 4, 24, 7, 44, 0, 3901228 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 7, 44, 1, 131655544 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testpg",
+  "type" : "postgres",
+  "frequency" : "weekly",
+  "filePath" : "/home/adel/Desktop/tryBackups/testpg/Weekly/Week4/testpg.backup",
+  "timestamp" : [ 2025, 4, 24, 7, 44, 0, 5234318 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "Large_Collections",
+  "filePath" : "/home/adel/Desktop/tryBackups/gestion_emp/Large_Collections",
+  "timestamp" : [ 2025, 4, 24, 7, 44, 0, 3901228 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "weekly",
+  "filePath" : "/home/adel/Desktop/tryBackups/gestion_emp/Weekly/Week4/gestion_emp",
+  "timestamp" : [ 2025, 4, 24, 7, 44, 2, 319900046 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testpg",
+  "type" : "postgres",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/tryBackups/testpg/Daily/4-Jeudi/testpg.backup",
+  "timestamp" : [ 2025, 4, 24, 7, 44, 13, 29832576 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 7, 44, 15, 683011660 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "Large_Collections",
+  "filePath" : "/home/adel/Desktop/doubleDB/gestion_emp/Large_Collections",
+  "timestamp" : [ 2025, 4, 24, 8, 28, 0, 15091739 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "Large_Collections",
+  "filePath" : "/home/adel/Desktop/doubleDB/gestion_emp/Large_Collections",
+  "timestamp" : [ 2025, 4, 24, 8, 28, 0, 15091739 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testpg",
+  "type" : "postgres",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/tryBackups/testpg/Daily/4-Jeudi/testpg.backup",
+  "timestamp" : [ 2025, 4, 24, 8, 28, 0, 15996917 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 28, 3, 931336825 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testpg",
+  "type" : "postgres",
+  "frequency" : "weekly",
+  "filePath" : "/home/adel/Desktop/tryBackups/testpg/Weekly/Week4/testpg.backup",
+  "timestamp" : [ 2025, 4, 24, 8, 28, 0, 15878493 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "weekly",
+  "filePath" : "/home/adel/Desktop/doubleDB/gestion_emp/Weekly/Week4/gestion_emp",
+  "timestamp" : [ 2025, 4, 24, 8, 28, 4, 783919807 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/doubleDB/gestion_emp/Daily/4-Jeudi/gestion_emp",
+  "timestamp" : [ 2025, 4, 24, 8, 28, 6, 831007005 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "location",
+  "type" : "mongo",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/doubleDB/location/Daily/4-Jeudi/location",
+  "timestamp" : [ 2025, 4, 24, 8, 28, 9, 494575692 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "product",
+  "type" : "mysql",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/tryBackups/product/Daily/4-Jeudi/product.sql",
+  "timestamp" : [ 2025, 4, 24, 8, 28, 11, 849191638 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 28, 35, 87810557 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 28, 48, 538969169 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 29, 1, 374812709 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testpg",
+  "type" : "postgres",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/tryBackups/testpg/Daily/4-Jeudi/testpg.backup",
+  "timestamp" : [ 2025, 4, 24, 8, 29, 22, 988161054 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 29, 34, 281318052 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/doubleDB/gestion_emp/Daily/4-Jeudi/gestion_emp",
+  "timestamp" : [ 2025, 4, 24, 8, 29, 39, 396175494 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "location",
+  "type" : "mongo",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/doubleDB/location/Daily/4-Jeudi/location",
+  "timestamp" : [ 2025, 4, 24, 8, 29, 46, 740433294 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "product",
+  "type" : "mysql",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/tryBackups/product/Daily/4-Jeudi/product.sql",
+  "timestamp" : [ 2025, 4, 24, 8, 29, 50, 50467236 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "monthly",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 30, 0, 5535918 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testpg",
+  "type" : "postgres",
+  "frequency" : "weekly",
+  "filePath" : "/home/adel/Desktop/tryBackups/testpg/Weekly/Week4/testpg.backup",
+  "timestamp" : [ 2025, 4, 24, 8, 30, 0, 7254286 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "product",
+  "type" : "mysql",
+  "frequency" : "monthly",
+  "filePath" : "/home/adel/Desktop/tryBackups/product/Monthly/4-Avril/product.sql",
+  "timestamp" : [ 2025, 4, 24, 8, 30, 2, 619970450 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "weekly",
+  "filePath" : "/home/adel/Desktop/doubleDB/gestion_emp/Weekly/Week4/gestion_emp",
+  "timestamp" : [ 2025, 4, 24, 8, 30, 3, 157194883 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 30, 14, 967636009 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "monthly",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 30, 25, 350370619 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 30, 28, 210849699 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "monthly",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 30, 38, 708843550 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 30, 40, 294561912 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "monthly",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 30, 51, 44824503 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testpg",
+  "type" : "postgres",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/tryBackups/testpg/Daily/4-Jeudi/testpg.backup",
+  "timestamp" : [ 2025, 4, 24, 8, 30, 52, 460284379 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 30, 55, 281687042 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/doubleDB/gestion_emp/Daily/4-Jeudi/gestion_emp",
+  "timestamp" : [ 2025, 4, 24, 8, 30, 58, 722863750 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "location",
+  "type" : "mongo",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/doubleDB/location/Daily/4-Jeudi/location",
+  "timestamp" : [ 2025, 4, 24, 8, 31, 0, 809023585 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "product",
+  "type" : "mysql",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/tryBackups/product/Daily/4-Jeudi/product.sql",
+  "timestamp" : [ 2025, 4, 24, 8, 31, 3, 880763675 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 31, 26, 545203006 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 31, 38, 725965962 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 31, 50, 704839307 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "Large_Collections",
+  "filePath" : "/home/adel/Desktop/doubleDB/gestion_emp/Large_Collections",
+  "timestamp" : [ 2025, 4, 24, 8, 32, 0, 4226563 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "Large_Collections",
+  "filePath" : "/home/adel/Desktop/doubleDB/gestion_emp/Large_Collections",
+  "timestamp" : [ 2025, 4, 24, 8, 32, 0, 4226563 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testpg",
+  "type" : "postgres",
+  "frequency" : "weekly",
+  "filePath" : "/home/adel/Desktop/tryBackups/testpg/Weekly/Week4/testpg.backup",
+  "timestamp" : [ 2025, 4, 24, 8, 32, 0, 5838669 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "weekly",
+  "filePath" : "/home/adel/Desktop/doubleDB/gestion_emp/Weekly/Week4/gestion_emp",
+  "timestamp" : [ 2025, 4, 24, 8, 32, 3, 541908472 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testpg",
+  "type" : "postgres",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/tryBackups/testpg/Daily/4-Jeudi/testpg.backup",
+  "timestamp" : [ 2025, 4, 24, 8, 32, 3, 650511748 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 32, 6, 551164306 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/doubleDB/gestion_emp/Daily/4-Jeudi/gestion_emp",
+  "timestamp" : [ 2025, 4, 24, 8, 32, 9, 186863736 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "location",
+  "type" : "mongo",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/doubleDB/location/Daily/4-Jeudi/location",
+  "timestamp" : [ 2025, 4, 24, 8, 32, 11, 362746493 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "product",
+  "type" : "mysql",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/tryBackups/product/Daily/4-Jeudi/product.sql",
+  "timestamp" : [ 2025, 4, 24, 8, 32, 13, 986442493 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 32, 36, 987927546 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 32, 50, 136537217 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "monthly",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 33, 0, 4340269 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 33, 1, 980910283 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "product",
+  "type" : "mysql",
+  "frequency" : "monthly",
+  "filePath" : "/home/adel/Desktop/tryBackups/product/Monthly/4-Avril/product.sql",
+  "timestamp" : [ 2025, 4, 24, 8, 33, 2, 586844129 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testpg",
+  "type" : "postgres",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/tryBackups/testpg/Daily/4-Jeudi/testpg.backup",
+  "timestamp" : [ 2025, 4, 24, 8, 33, 14, 89176113 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 33, 18, 230453230 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/doubleDB/gestion_emp/Daily/4-Jeudi/gestion_emp",
+  "timestamp" : [ 2025, 4, 24, 8, 33, 20, 449767068 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "monthly",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 33, 24, 571889067 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "location",
+  "type" : "mongo",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/doubleDB/location/Daily/4-Jeudi/location",
+  "timestamp" : [ 2025, 4, 24, 8, 33, 22, 287287471 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "product",
+  "type" : "mysql",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/tryBackups/product/Daily/4-Jeudi/product.sql",
+  "timestamp" : [ 2025, 4, 24, 8, 33, 24, 827859636 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "monthly",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 33, 37, 206011726 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 33, 47, 330645767 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "monthly",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 33, 49, 510007504 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 33, 59, 318143924 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testpg",
+  "type" : "postgres",
+  "frequency" : "weekly",
+  "filePath" : "/home/adel/Desktop/tryBackups/testpg/Weekly/Week4/testpg.backup",
+  "timestamp" : [ 2025, 4, 24, 8, 34, 0, 4977798 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "weekly",
+  "filePath" : "/home/adel/Desktop/doubleDB/gestion_emp/Weekly/Week4/gestion_emp",
+  "timestamp" : [ 2025, 4, 24, 8, 34, 3, 246340008 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 34, 12, 593412957 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testpg",
+  "type" : "postgres",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/tryBackups/testpg/Daily/4-Jeudi/testpg.backup",
+  "timestamp" : [ 2025, 4, 24, 8, 34, 27, 933479849 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 34, 30, 690982452 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/doubleDB/gestion_emp/Daily/4-Jeudi/gestion_emp",
+  "timestamp" : [ 2025, 4, 24, 8, 34, 33, 185254489 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "location",
+  "type" : "mongo",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/doubleDB/location/Daily/4-Jeudi/location",
+  "timestamp" : [ 2025, 4, 24, 8, 34, 36, 259187145 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "product",
+  "type" : "mysql",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/tryBackups/product/Daily/4-Jeudi/product.sql",
+  "timestamp" : [ 2025, 4, 24, 8, 34, 38, 819345577 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 35, 1, 566939924 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 35, 14, 789376875 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 35, 27, 831804359 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testpg",
+  "type" : "postgres",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/tryBackups/testpg/Daily/4-Jeudi/testpg.backup",
+  "timestamp" : [ 2025, 4, 24, 8, 35, 40, 804622930 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 35, 44, 148538187 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/doubleDB/gestion_emp/Daily/4-Jeudi/gestion_emp",
+  "timestamp" : [ 2025, 4, 24, 8, 35, 47, 491397168 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "location",
+  "type" : "mongo",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/doubleDB/location/Daily/4-Jeudi/location",
+  "timestamp" : [ 2025, 4, 24, 8, 35, 49, 575512193 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "product",
+  "type" : "mysql",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/tryBackups/product/Daily/4-Jeudi/product.sql",
+  "timestamp" : [ 2025, 4, 24, 8, 35, 53, 263166371 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "monthly",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 36, 0, 4611157 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "Large_Collections",
+  "filePath" : "/home/adel/Desktop/doubleDB/gestion_emp/Large_Collections",
+  "timestamp" : [ 2025, 4, 24, 8, 36, 0, 4158916 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "Large_Collections",
+  "filePath" : "/home/adel/Desktop/doubleDB/gestion_emp/Large_Collections",
+  "timestamp" : [ 2025, 4, 24, 8, 36, 0, 4158916 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testpg",
+  "type" : "postgres",
+  "frequency" : "weekly",
+  "filePath" : "/home/adel/Desktop/tryBackups/testpg/Weekly/Week4/testpg.backup",
+  "timestamp" : [ 2025, 4, 24, 8, 36, 0, 6439530 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "product",
+  "type" : "mysql",
+  "frequency" : "monthly",
+  "filePath" : "/home/adel/Desktop/tryBackups/product/Monthly/4-Avril/product.sql",
+  "timestamp" : [ 2025, 4, 24, 8, 36, 3, 200498853 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "weekly",
+  "filePath" : "/home/adel/Desktop/doubleDB/gestion_emp/Weekly/Week4/gestion_emp",
+  "timestamp" : [ 2025, 4, 24, 8, 36, 3, 409311612 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 36, 17, 358725663 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "monthly",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 36, 25, 756939493 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 36, 29, 337147181 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "monthly",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 36, 38, 794905951 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 36, 42, 851605843 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "monthly",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 36, 51, 447283928 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testpg",
+  "type" : "postgres",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/tryBackups/testpg/Daily/4-Jeudi/testpg.backup",
+  "timestamp" : [ 2025, 4, 24, 8, 36, 57, 126763115 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 37, 0, 501298789 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/doubleDB/gestion_emp/Daily/4-Jeudi/gestion_emp",
+  "timestamp" : [ 2025, 4, 24, 8, 37, 3, 920846725 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "location",
+  "type" : "mongo",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/doubleDB/location/Daily/4-Jeudi/location",
+  "timestamp" : [ 2025, 4, 24, 8, 37, 8, 219133353 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "product",
+  "type" : "mysql",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/tryBackups/product/Daily/4-Jeudi/product.sql",
+  "timestamp" : [ 2025, 4, 24, 8, 37, 12, 621735241 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 37, 38, 117894950 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 37, 52, 829528471 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testpg",
+  "type" : "postgres",
+  "frequency" : "weekly",
+  "filePath" : "/home/adel/Desktop/tryBackups/testpg/Weekly/Week4/testpg.backup",
+  "timestamp" : [ 2025, 4, 24, 8, 38, 0, 3338877 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 38, 6, 653582138 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "weekly",
+  "filePath" : "/home/adel/Desktop/doubleDB/gestion_emp/Weekly/Week4/gestion_emp",
+  "timestamp" : [ 2025, 4, 24, 8, 38, 4, 234711415 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testpg",
+  "type" : "postgres",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/tryBackups/testpg/Daily/4-Jeudi/testpg.backup",
+  "timestamp" : [ 2025, 4, 24, 8, 38, 20, 737426256 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 38, 25, 606930795 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/doubleDB/gestion_emp/Daily/4-Jeudi/gestion_emp",
+  "timestamp" : [ 2025, 4, 24, 8, 38, 28, 806800197 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "location",
+  "type" : "mongo",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/doubleDB/location/Daily/4-Jeudi/location",
+  "timestamp" : [ 2025, 4, 24, 8, 38, 32, 390497256 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "product",
+  "type" : "mysql",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/tryBackups/product/Daily/4-Jeudi/product.sql",
+  "timestamp" : [ 2025, 4, 24, 8, 38, 35, 260877567 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "monthly",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 39, 0, 3623403 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 39, 0, 580273909 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "product",
+  "type" : "mysql",
+  "frequency" : "monthly",
+  "filePath" : "/home/adel/Desktop/tryBackups/product/Monthly/4-Avril/product.sql",
+  "timestamp" : [ 2025, 4, 24, 8, 39, 3, 519957662 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 39, 13, 316214698 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "monthly",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 39, 26, 81805232 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 39, 26, 219834041 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "monthly",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 39, 39, 17335997 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testpg",
+  "type" : "postgres",
+  "frequency" : "Manual",
+  "filePath" : "/home/adel/Desktop/tryBackups/testpg/Manual/testpg.backup",
+  "timestamp" : [ 2025, 4, 24, 8, 39, 38, 898556719 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Manual",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 39, 42, 216095511 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testpg",
+  "type" : "postgres",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/tryBackups/testpg/Daily/4-Jeudi/testpg.backup",
+  "timestamp" : [ 2025, 4, 24, 8, 39, 39, 21184294 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 39, 43, 11027917 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "Manual",
+  "filePath" : "/home/adel/Desktop/doubleDB/gestion_emp/Manual/gestion_emp",
+  "timestamp" : [ 2025, 4, 24, 8, 39, 44, 925965378 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/doubleDB/gestion_emp/Daily/4-Jeudi/gestion_emp",
+  "timestamp" : [ 2025, 4, 24, 8, 39, 45, 819230373 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "location",
+  "type" : "mongo",
+  "frequency" : "Manual",
+  "filePath" : "/home/adel/Desktop/doubleDB/location/Manual/location",
+  "timestamp" : [ 2025, 4, 24, 8, 39, 47, 951508536 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "location",
+  "type" : "mongo",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/doubleDB/location/Daily/4-Jeudi/location",
+  "timestamp" : [ 2025, 4, 24, 8, 39, 48, 576527571 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "monthly",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 39, 52, 124704775 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "product",
+  "type" : "mysql",
+  "frequency" : "Manual",
+  "filePath" : "/home/adel/Desktop/tryBackups/product/Manual/product.sql",
+  "timestamp" : [ 2025, 4, 24, 8, 39, 50, 730818491 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "product",
+  "type" : "mysql",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/tryBackups/product/Daily/4-Jeudi/product.sql",
+  "timestamp" : [ 2025, 4, 24, 8, 39, 51, 569318067 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "Large_Collections",
+  "filePath" : "/home/adel/Desktop/doubleDB/gestion_emp/Large_Collections",
+  "timestamp" : [ 2025, 4, 24, 8, 40, 0, 3495381 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "Large_Collections",
+  "filePath" : "/home/adel/Desktop/doubleDB/gestion_emp/Large_Collections",
+  "timestamp" : [ 2025, 4, 24, 8, 40, 0, 3495381 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testpg",
+  "type" : "postgres",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/tryBackups/testpg/Dynamic/testpg.backup",
+  "timestamp" : [ 2025, 4, 24, 8, 40, 0, 6824336 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 40, 3, 324743349 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testpg",
+  "type" : "postgres",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/tryBackups/testpg/Dynamic/testpg.backup",
+  "timestamp" : [ 2025, 4, 24, 8, 40, 0, 6931641 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 40, 3, 387838426 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testpg",
+  "type" : "postgres",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/tryBackups/testpg/Dynamic/testpg.backup",
+  "timestamp" : [ 2025, 4, 24, 8, 40, 0, 6858805 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 40, 3, 493165266 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testpg",
+  "type" : "postgres",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/tryBackups/testpg/Dynamic/testpg.backup",
+  "timestamp" : [ 2025, 4, 24, 8, 40, 0, 6872908 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 40, 3, 645453902 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testpg",
+  "type" : "postgres",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/tryBackups/testpg/Dynamic/testpg.backup",
+  "timestamp" : [ 2025, 4, 24, 8, 40, 0, 7031756 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 40, 4, 200061233 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testpg",
+  "type" : "postgres",
+  "frequency" : "weekly",
+  "filePath" : "/home/adel/Desktop/tryBackups/testpg/Weekly/Week4/testpg.backup",
+  "timestamp" : [ 2025, 4, 24, 8, 40, 0, 3389538 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "weekly",
+  "filePath" : "/home/adel/Desktop/doubleDB/gestion_emp/Weekly/Week4/gestion_emp",
+  "timestamp" : [ 2025, 4, 24, 8, 40, 4, 650914803 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/doubleDB/gestion_emp/Dynamic/gestion_emp",
+  "timestamp" : [ 2025, 4, 24, 8, 40, 5, 466161014 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/doubleDB/gestion_emp/Dynamic/gestion_emp",
+  "timestamp" : [ 2025, 4, 24, 8, 40, 5, 946098637 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/doubleDB/gestion_emp/Dynamic/gestion_emp",
+  "timestamp" : [ 2025, 4, 24, 8, 40, 5, 721802605 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/doubleDB/gestion_emp/Dynamic/gestion_emp",
+  "timestamp" : [ 2025, 4, 24, 8, 40, 6, 293060094 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/doubleDB/gestion_emp/Dynamic/gestion_emp",
+  "timestamp" : [ 2025, 4, 24, 8, 40, 6, 551127679 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "location",
+  "type" : "mongo",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/doubleDB/location/Dynamic/location",
+  "timestamp" : [ 2025, 4, 24, 8, 40, 8, 342956539 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "location",
+  "type" : "mongo",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/doubleDB/location/Dynamic/location",
+  "timestamp" : [ 2025, 4, 24, 8, 40, 8, 880157546 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "location",
+  "type" : "mongo",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/doubleDB/location/Dynamic/location",
+  "timestamp" : [ 2025, 4, 24, 8, 40, 9, 14665999 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "location",
+  "type" : "mongo",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/doubleDB/location/Dynamic/location",
+  "timestamp" : [ 2025, 4, 24, 8, 40, 9, 164400352 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "location",
+  "type" : "mongo",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/doubleDB/location/Dynamic/location",
+  "timestamp" : [ 2025, 4, 24, 8, 40, 9, 672683149 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "product",
+  "type" : "mysql",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/tryBackups/product/Dynamic/product.sql",
+  "timestamp" : [ 2025, 4, 24, 8, 40, 10, 470615626 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "product",
+  "type" : "mysql",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/tryBackups/product/Dynamic/product.sql",
+  "timestamp" : [ 2025, 4, 24, 8, 40, 10, 907877366 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "product",
+  "type" : "mysql",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/tryBackups/product/Dynamic/product.sql",
+  "timestamp" : [ 2025, 4, 24, 8, 40, 10, 958875552 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "product",
+  "type" : "mysql",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/tryBackups/product/Dynamic/product.sql",
+  "timestamp" : [ 2025, 4, 24, 8, 40, 11, 295651426 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "product",
+  "type" : "mysql",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/tryBackups/product/Dynamic/product.sql",
+  "timestamp" : [ 2025, 4, 24, 8, 40, 11, 893879874 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 40, 15, 153357980 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 40, 27, 346354298 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 40, 32, 947479880 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 40, 33, 317150682 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 40, 33, 356915845 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 40, 33, 972992754 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 40, 34, 376438308 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 40, 40, 356526578 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 40, 45, 328308632 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 40, 45, 460012964 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 40, 45, 568894668 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 40, 46, 84427232 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 40, 46, 706338584 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testpg",
+  "type" : "postgres",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/tryBackups/testpg/Daily/4-Jeudi/testpg.backup",
+  "timestamp" : [ 2025, 4, 24, 8, 40, 52, 826748693 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 40, 57, 385600794 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 40, 58, 120320674 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 40, 58, 372679612 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 40, 58, 478756106 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 40, 59, 200695553 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 40, 59, 876131929 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/doubleDB/gestion_emp/Daily/4-Jeudi/gestion_emp",
+  "timestamp" : [ 2025, 4, 24, 8, 40, 59, 522762268 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "location",
+  "type" : "mongo",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/doubleDB/location/Daily/4-Jeudi/location",
+  "timestamp" : [ 2025, 4, 24, 8, 41, 2, 782998795 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "product",
+  "type" : "mysql",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/tryBackups/product/Daily/4-Jeudi/product.sql",
+  "timestamp" : [ 2025, 4, 24, 8, 41, 5, 449143675 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testpg",
+  "type" : "postgres",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/tryBackups/testpg/Dynamic/testpg.backup",
+  "timestamp" : [ 2025, 4, 24, 8, 41, 10, 924205372 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 41, 14, 258251199 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testpg",
+  "type" : "postgres",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/tryBackups/testpg/Dynamic/testpg.backup",
+  "timestamp" : [ 2025, 4, 24, 8, 41, 11, 359963186 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 41, 14, 570846526 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testpg",
+  "type" : "postgres",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/tryBackups/testpg/Dynamic/testpg.backup",
+  "timestamp" : [ 2025, 4, 24, 8, 41, 12, 306390262 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 41, 14, 965600604 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testpg",
+  "type" : "postgres",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/tryBackups/testpg/Dynamic/testpg.backup",
+  "timestamp" : [ 2025, 4, 24, 8, 41, 11, 185348596 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 41, 15, 146445266 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testpg",
+  "type" : "postgres",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/tryBackups/testpg/Dynamic/testpg.backup",
+  "timestamp" : [ 2025, 4, 24, 8, 41, 13, 433992920 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 41, 16, 89604465 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/doubleDB/gestion_emp/Dynamic/gestion_emp",
+  "timestamp" : [ 2025, 4, 24, 8, 41, 16, 482599639 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/doubleDB/gestion_emp/Dynamic/gestion_emp",
+  "timestamp" : [ 2025, 4, 24, 8, 41, 17, 95994963 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/doubleDB/gestion_emp/Dynamic/gestion_emp",
+  "timestamp" : [ 2025, 4, 24, 8, 41, 17, 365738593 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/doubleDB/gestion_emp/Dynamic/gestion_emp",
+  "timestamp" : [ 2025, 4, 24, 8, 41, 17, 869834559 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/doubleDB/gestion_emp/Dynamic/gestion_emp",
+  "timestamp" : [ 2025, 4, 24, 8, 41, 18, 310604068 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "location",
+  "type" : "mongo",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/doubleDB/location/Dynamic/location",
+  "timestamp" : [ 2025, 4, 24, 8, 41, 18, 629987771 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "location",
+  "type" : "mongo",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/doubleDB/location/Dynamic/location",
+  "timestamp" : [ 2025, 4, 24, 8, 41, 19, 153110807 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "location",
+  "type" : "mongo",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/doubleDB/location/Dynamic/location",
+  "timestamp" : [ 2025, 4, 24, 8, 41, 19, 567793589 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "location",
+  "type" : "mongo",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/doubleDB/location/Dynamic/location",
+  "timestamp" : [ 2025, 4, 24, 8, 41, 19, 888380462 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "location",
+  "type" : "mongo",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/doubleDB/location/Dynamic/location",
+  "timestamp" : [ 2025, 4, 24, 8, 41, 20, 478740147 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "product",
+  "type" : "mysql",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/tryBackups/product/Dynamic/product.sql",
+  "timestamp" : [ 2025, 4, 24, 8, 41, 21, 146123553 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "product",
+  "type" : "mysql",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/tryBackups/product/Dynamic/product.sql",
+  "timestamp" : [ 2025, 4, 24, 8, 41, 21, 434528988 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "product",
+  "type" : "mysql",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/tryBackups/product/Dynamic/product.sql",
+  "timestamp" : [ 2025, 4, 24, 8, 41, 22, 63541002 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "product",
+  "type" : "mysql",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/tryBackups/product/Dynamic/product.sql",
+  "timestamp" : [ 2025, 4, 24, 8, 41, 22, 365874195 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "product",
+  "type" : "mysql",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/tryBackups/product/Dynamic/product.sql",
+  "timestamp" : [ 2025, 4, 24, 8, 41, 22, 893388822 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 41, 27, 629036079 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 41, 38, 929075023 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 41, 43, 462074502 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 41, 43, 657843340 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 41, 44, 402599316 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 41, 44, 484900295 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 41, 44, 921495063 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 41, 51, 115909197 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 41, 54, 329682819 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 41, 54, 529323615 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 41, 55, 414670664 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 41, 55, 485720387 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 41, 56, 119039750 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "monthly",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 42, 0, 3754942 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testpg",
+  "type" : "postgres",
+  "frequency" : "weekly",
+  "filePath" : "/home/adel/Desktop/tryBackups/testpg/Weekly/Week4/testpg.backup",
+  "timestamp" : [ 2025, 4, 24, 8, 42, 0, 3553806 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "product",
+  "type" : "mysql",
+  "frequency" : "monthly",
+  "filePath" : "/home/adel/Desktop/tryBackups/product/Monthly/4-Avril/product.sql",
+  "timestamp" : [ 2025, 4, 24, 8, 42, 1, 606250532 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "weekly",
+  "filePath" : "/home/adel/Desktop/doubleDB/gestion_emp/Weekly/Week4/gestion_emp",
+  "timestamp" : [ 2025, 4, 24, 8, 42, 2, 208398605 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testpg",
+  "type" : "postgres",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/tryBackups/testpg/Daily/4-Jeudi/testpg.backup",
+  "timestamp" : [ 2025, 4, 24, 8, 42, 2, 995162684 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 42, 4, 781248935 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 42, 6, 121685058 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/doubleDB/gestion_emp/Daily/4-Jeudi/gestion_emp",
+  "timestamp" : [ 2025, 4, 24, 8, 42, 5, 473154532 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 42, 6, 373232838 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "location",
+  "type" : "mongo",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/doubleDB/location/Daily/4-Jeudi/location",
+  "timestamp" : [ 2025, 4, 24, 8, 42, 6, 310016695 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 42, 7, 599347223 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 42, 7, 599347186 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 42, 8, 321800005 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "product",
+  "type" : "mysql",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/tryBackups/product/Daily/4-Jeudi/product.sql",
+  "timestamp" : [ 2025, 4, 24, 8, 42, 7, 471778042 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testpg",
+  "type" : "postgres",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/tryBackups/testpg/Dynamic/testpg.backup",
+  "timestamp" : [ 2025, 4, 24, 8, 42, 17, 331096358 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 42, 18, 598530466 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testpg",
+  "type" : "postgres",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/tryBackups/testpg/Dynamic/testpg.backup",
+  "timestamp" : [ 2025, 4, 24, 8, 42, 17, 543874802 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 42, 18, 633658362 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testpg",
+  "type" : "postgres",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/tryBackups/testpg/Dynamic/testpg.backup",
+  "timestamp" : [ 2025, 4, 24, 8, 42, 19, 21077377 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 42, 20, 424198596 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testpg",
+  "type" : "postgres",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/tryBackups/testpg/Dynamic/testpg.backup",
+  "timestamp" : [ 2025, 4, 24, 8, 42, 19, 14956781 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 42, 20, 448831558 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/doubleDB/gestion_emp/Dynamic/gestion_emp",
+  "timestamp" : [ 2025, 4, 24, 8, 42, 19, 524761837 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/doubleDB/gestion_emp/Dynamic/gestion_emp",
+  "timestamp" : [ 2025, 4, 24, 8, 42, 19, 547180838 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testpg",
+  "type" : "postgres",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/tryBackups/testpg/Dynamic/testpg.backup",
+  "timestamp" : [ 2025, 4, 24, 8, 42, 19, 788345549 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 42, 20, 863651589 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "location",
+  "type" : "mongo",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/doubleDB/location/Dynamic/location",
+  "timestamp" : [ 2025, 4, 24, 8, 42, 20, 473371562 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "location",
+  "type" : "mongo",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/doubleDB/location/Dynamic/location",
+  "timestamp" : [ 2025, 4, 24, 8, 42, 20, 484049801 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "product",
+  "type" : "mysql",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/tryBackups/product/Dynamic/product.sql",
+  "timestamp" : [ 2025, 4, 24, 8, 42, 21, 197639855 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/doubleDB/gestion_emp/Dynamic/gestion_emp",
+  "timestamp" : [ 2025, 4, 24, 8, 42, 21, 186404741 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/doubleDB/gestion_emp/Dynamic/gestion_emp",
+  "timestamp" : [ 2025, 4, 24, 8, 42, 21, 192371963 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "product",
+  "type" : "mysql",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/tryBackups/product/Dynamic/product.sql",
+  "timestamp" : [ 2025, 4, 24, 8, 42, 21, 254820380 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "monthly",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 42, 23, 27716059 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/doubleDB/gestion_emp/Dynamic/gestion_emp",
+  "timestamp" : [ 2025, 4, 24, 8, 42, 22, 64062202 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "location",
+  "type" : "mongo",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/doubleDB/location/Dynamic/location",
+  "timestamp" : [ 2025, 4, 24, 8, 42, 22, 450661801 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "location",
+  "type" : "mongo",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/doubleDB/location/Dynamic/location",
+  "timestamp" : [ 2025, 4, 24, 8, 42, 22, 584511642 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 42, 28, 889914254 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "product",
+  "type" : "mysql",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/tryBackups/product/Dynamic/product.sql",
+  "timestamp" : [ 2025, 4, 24, 8, 42, 26, 579268811 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "product",
+  "type" : "mysql",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/tryBackups/product/Dynamic/product.sql",
+  "timestamp" : [ 2025, 4, 24, 8, 42, 26, 579268831 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "location",
+  "type" : "mongo",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/doubleDB/location/Dynamic/location",
+  "timestamp" : [ 2025, 4, 24, 8, 42, 24, 541935529 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "product",
+  "type" : "mysql",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/tryBackups/product/Dynamic/product.sql",
+  "timestamp" : [ 2025, 4, 24, 8, 42, 29, 855620810 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "monthly",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 42, 39, 345980911 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 42, 40, 680007848 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 42, 42, 371299363 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 42, 42, 584731474 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 42, 49, 375906397 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 42, 49, 378978717 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 42, 52, 8142790 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "monthly",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 42, 52, 912136946 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 42, 56, 129063706 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 42, 57, 453396111 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 42, 57, 563990335 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 43, 4, 747138661 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 43, 4, 753788670 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 43, 7, 197095706 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 43, 11, 967816309 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 43, 11, 969137114 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testpg",
+  "type" : "postgres",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/tryBackups/testpg/Daily/4-Jeudi/testpg.backup",
+  "timestamp" : [ 2025, 4, 24, 8, 43, 10, 431834338 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 43, 14, 569792343 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 43, 17, 625409596 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 43, 17, 629194233 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 43, 19, 904000845 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/doubleDB/gestion_emp/Daily/4-Jeudi/gestion_emp",
+  "timestamp" : [ 2025, 4, 24, 8, 43, 17, 881975744 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "location",
+  "type" : "mongo",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/doubleDB/location/Daily/4-Jeudi/location",
+  "timestamp" : [ 2025, 4, 24, 8, 43, 21, 693182186 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "product",
+  "type" : "mysql",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/tryBackups/product/Daily/4-Jeudi/product.sql",
+  "timestamp" : [ 2025, 4, 24, 8, 43, 26, 41498836 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testpg",
+  "type" : "postgres",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/tryBackups/testpg/Dynamic/testpg.backup",
+  "timestamp" : [ 2025, 4, 24, 8, 43, 25, 845762575 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 43, 29, 728168118 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testpg",
+  "type" : "postgres",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/tryBackups/testpg/Dynamic/testpg.backup",
+  "timestamp" : [ 2025, 4, 24, 8, 43, 25, 856495233 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 43, 29, 757299627 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testpg",
+  "type" : "postgres",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/tryBackups/testpg/Dynamic/testpg.backup",
+  "timestamp" : [ 2025, 4, 24, 8, 43, 31, 162677694 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 43, 35, 840996097 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testpg",
+  "type" : "postgres",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/tryBackups/testpg/Dynamic/testpg.backup",
+  "timestamp" : [ 2025, 4, 24, 8, 43, 31, 188112488 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 43, 35, 851148742 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/doubleDB/gestion_emp/Dynamic/gestion_emp",
+  "timestamp" : [ 2025, 4, 24, 8, 43, 33, 981122589 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/doubleDB/gestion_emp/Dynamic/gestion_emp",
+  "timestamp" : [ 2025, 4, 24, 8, 43, 34, 9039312 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testpg",
+  "type" : "postgres",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/tryBackups/testpg/Dynamic/testpg.backup",
+  "timestamp" : [ 2025, 4, 24, 8, 43, 34, 712497430 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 43, 38, 444216067 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "location",
+  "type" : "mongo",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/doubleDB/location/Dynamic/location",
+  "timestamp" : [ 2025, 4, 24, 8, 43, 37, 780336694 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "location",
+  "type" : "mongo",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/doubleDB/location/Dynamic/location",
+  "timestamp" : [ 2025, 4, 24, 8, 43, 37, 758775594 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/doubleDB/gestion_emp/Dynamic/gestion_emp",
+  "timestamp" : [ 2025, 4, 24, 8, 43, 38, 854164352 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/doubleDB/gestion_emp/Dynamic/gestion_emp",
+  "timestamp" : [ 2025, 4, 24, 8, 43, 38, 867758722 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "product",
+  "type" : "mysql",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/tryBackups/product/Dynamic/product.sql",
+  "timestamp" : [ 2025, 4, 24, 8, 43, 40, 523671322 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "product",
+  "type" : "mysql",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/tryBackups/product/Dynamic/product.sql",
+  "timestamp" : [ 2025, 4, 24, 8, 43, 40, 521116494 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/doubleDB/gestion_emp/Dynamic/gestion_emp",
+  "timestamp" : [ 2025, 4, 24, 8, 43, 41, 111603051 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "location",
+  "type" : "mongo",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/doubleDB/location/Dynamic/location",
+  "timestamp" : [ 2025, 4, 24, 8, 43, 41, 652285375 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "location",
+  "type" : "mongo",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/doubleDB/location/Dynamic/location",
+  "timestamp" : [ 2025, 4, 24, 8, 43, 41, 711585390 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "location",
+  "type" : "mongo",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/doubleDB/location/Dynamic/location",
+  "timestamp" : [ 2025, 4, 24, 8, 43, 44, 262844252 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "product",
+  "type" : "mysql",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/tryBackups/product/Dynamic/product.sql",
+  "timestamp" : [ 2025, 4, 24, 8, 43, 45, 5157226 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "product",
+  "type" : "mysql",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/tryBackups/product/Dynamic/product.sql",
+  "timestamp" : [ 2025, 4, 24, 8, 43, 45, 81848560 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 43, 49, 631823814 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "product",
+  "type" : "mysql",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/tryBackups/product/Dynamic/product.sql",
+  "timestamp" : [ 2025, 4, 24, 8, 43, 47, 929811742 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "Large_Collections",
+  "filePath" : "/home/adel/Desktop/doubleDB/gestion_emp/Large_Collections",
+  "timestamp" : [ 2025, 4, 24, 8, 44, 0, 1818686 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 44, 0, 494885463 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testpg",
+  "type" : "postgres",
+  "frequency" : "weekly",
+  "filePath" : "/home/adel/Desktop/tryBackups/testpg/Weekly/Week4/testpg.backup",
+  "timestamp" : [ 2025, 4, 24, 8, 44, 0, 2410911 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "weekly",
+  "filePath" : "/home/adel/Desktop/doubleDB/gestion_emp/Weekly/Week4/gestion_emp",
+  "timestamp" : [ 2025, 4, 24, 8, 44, 1, 580654363 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "Large_Collections",
+  "filePath" : "/home/adel/Desktop/doubleDB/gestion_emp/Large_Collections",
+  "timestamp" : [ 2025, 4, 24, 8, 44, 0, 1818686 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 44, 3, 568532077 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 44, 3, 571589015 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 44, 8, 876587725 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 44, 9, 12833649 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 44, 9, 886273074 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 44, 11, 729820026 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 44, 15, 56845599 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 44, 15, 56845619 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 44, 19, 986995260 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 44, 20, 257171350 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 44, 20, 779340718 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testpg",
+  "type" : "postgres",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/tryBackups/testpg/Daily/4-Jeudi/testpg.backup",
+  "timestamp" : [ 2025, 4, 24, 8, 44, 22, 689052326 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 44, 23, 876046344 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/doubleDB/gestion_emp/Daily/4-Jeudi/gestion_emp",
+  "timestamp" : [ 2025, 4, 24, 8, 44, 25, 37352159 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "location",
+  "type" : "mongo",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/doubleDB/location/Daily/4-Jeudi/location",
+  "timestamp" : [ 2025, 4, 24, 8, 44, 25, 836598989 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 44, 26, 689092125 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 44, 26, 691069772 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "product",
+  "type" : "mysql",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/tryBackups/product/Daily/4-Jeudi/product.sql",
+  "timestamp" : [ 2025, 4, 24, 8, 44, 26, 652193061 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 44, 31, 490405466 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 44, 31, 594244580 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 44, 31, 933655546 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testpg",
+  "type" : "postgres",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/tryBackups/testpg/Dynamic/testpg.backup",
+  "timestamp" : [ 2025, 4, 24, 8, 44, 37, 464758893 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testpg",
+  "type" : "postgres",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/tryBackups/testpg/Dynamic/testpg.backup",
+  "timestamp" : [ 2025, 4, 24, 8, 44, 37, 438102981 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 44, 39, 290233877 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 44, 39, 290233858 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/doubleDB/gestion_emp/Dynamic/gestion_emp",
+  "timestamp" : [ 2025, 4, 24, 8, 44, 41, 421433897 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/doubleDB/gestion_emp/Dynamic/gestion_emp",
+  "timestamp" : [ 2025, 4, 24, 8, 44, 41, 422399591 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "location",
+  "type" : "mongo",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/doubleDB/location/Dynamic/location",
+  "timestamp" : [ 2025, 4, 24, 8, 44, 42, 797262172 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "location",
+  "type" : "mongo",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/doubleDB/location/Dynamic/location",
+  "timestamp" : [ 2025, 4, 24, 8, 44, 42, 797262191 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testpg",
+  "type" : "postgres",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/tryBackups/testpg/Dynamic/testpg.backup",
+  "timestamp" : [ 2025, 4, 24, 8, 44, 42, 964795596 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testpg",
+  "type" : "postgres",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/tryBackups/testpg/Dynamic/testpg.backup",
+  "timestamp" : [ 2025, 4, 24, 8, 44, 42, 976008456 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 44, 44, 513056685 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 44, 44, 513056679 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testpg",
+  "type" : "postgres",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/tryBackups/testpg/Dynamic/testpg.backup",
+  "timestamp" : [ 2025, 4, 24, 8, 44, 43, 146032782 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 44, 45, 23533587 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "product",
+  "type" : "mysql",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/tryBackups/product/Dynamic/product.sql",
+  "timestamp" : [ 2025, 4, 24, 8, 44, 43, 613807048 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "product",
+  "type" : "mysql",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/tryBackups/product/Dynamic/product.sql",
+  "timestamp" : [ 2025, 4, 24, 8, 44, 43, 625300992 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/doubleDB/gestion_emp/Dynamic/gestion_emp",
+  "timestamp" : [ 2025, 4, 24, 8, 44, 45, 800847350 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/doubleDB/gestion_emp/Dynamic/gestion_emp",
+  "timestamp" : [ 2025, 4, 24, 8, 44, 45, 790099932 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/doubleDB/gestion_emp/Dynamic/gestion_emp",
+  "timestamp" : [ 2025, 4, 24, 8, 44, 46, 322155128 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 44, 47, 414100889 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "location",
+  "type" : "mongo",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/doubleDB/location/Dynamic/location",
+  "timestamp" : [ 2025, 4, 24, 8, 44, 46, 787056180 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "location",
+  "type" : "mongo",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/doubleDB/location/Dynamic/location",
+  "timestamp" : [ 2025, 4, 24, 8, 44, 46, 835415894 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "location",
+  "type" : "mongo",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/doubleDB/location/Dynamic/location",
+  "timestamp" : [ 2025, 4, 24, 8, 44, 47, 374297406 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "product",
+  "type" : "mysql",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/tryBackups/product/Dynamic/product.sql",
+  "timestamp" : [ 2025, 4, 24, 8, 44, 47, 887488071 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "product",
+  "type" : "mysql",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/tryBackups/product/Dynamic/product.sql",
+  "timestamp" : [ 2025, 4, 24, 8, 44, 47, 931945307 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "product",
+  "type" : "mysql",
+  "frequency" : "Dynamic",
+  "filePath" : "/home/adel/Desktop/tryBackups/product/Dynamic/product.sql",
+  "timestamp" : [ 2025, 4, 24, 8, 44, 48, 687472510 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 44, 58, 768760222 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "monthly",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 45, 0, 2781051 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "product",
+  "type" : "mysql",
+  "frequency" : "monthly",
+  "filePath" : "/home/adel/Desktop/tryBackups/product/Monthly/4-Avril/product.sql",
+  "timestamp" : [ 2025, 4, 24, 8, 45, 0, 996981955 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 45, 5, 229105632 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 45, 5, 238482919 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 45, 9, 90970901 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 45, 9, 223473161 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 45, 9, 902121477 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 45, 10, 44354288 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 45, 16, 833860393 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 45, 16, 833872651 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 45, 20, 353490379 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 45, 20, 442151610 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Dynamic",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 45, 21, 442877858 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "monthly",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 45, 22, 472540523 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testpg",
+  "type" : "postgres",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/tryBackups/testpg/Daily/4-Jeudi/testpg.backup",
+  "timestamp" : [ 2025, 4, 24, 8, 45, 21, 649461628 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 24, 8, 45, 23, 961716820 ],
+  "status" : "FAILED"
 } ]
