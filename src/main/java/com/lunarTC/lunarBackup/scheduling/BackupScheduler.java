@@ -22,13 +22,19 @@ public class BackupScheduler {
 
     @PostConstruct
     public void schedulePredefinedBackups() throws SchedulerException {
-        scheduleBackup(DailyBackupJob.class, "daily", "0 0/48 * * * ?");    // Every 2 minute
-        scheduleBackup(WeeklyBackupJob.class, "weekly", "0 0/50 * * * ?");  // Every 10 minutes
-        scheduleBackup(MonthlyBackupJob.class, "monthly", "0 0/50 * * * ?"); // Every 30 minutes
-        scheduleBackup(LargeCollectionBackupJob.class, "large_collections", "0 0/40 * * * ?");
+        // Daily at 2AM (for testing)
+        scheduleBackup(DailyBackupJob.class, "daily", "0 17 11 * * ?");
 
+        // EveryDay at 3:00 AM
+        scheduleBackup(WeeklyBackupJob.class, "weekly", "0 0 3 * * ?");
 
+        // EveryDay  at 4:00 AM
+        scheduleBackup(MonthlyBackupJob.class, "monthly", "0 0 4 * * ?");
+
+        // Large collections backup every day at 5:00 AM
+        scheduleBackup(LargeCollectionBackupJob.class, "large_collections", "0 28 10 * * ?");
     }
+
 
     private void scheduleBackup(Class<? extends Job> jobClass, String frequency, String cronExpression) throws SchedulerException {
         JobDetail jobDetail = JobBuilder.newJob(jobClass)

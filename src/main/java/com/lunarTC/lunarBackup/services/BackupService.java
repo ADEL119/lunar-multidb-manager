@@ -1,6 +1,5 @@
 package com.lunarTC.lunarBackup.services;
 
-
 import com.lunarTC.lunarBackup.models.BackupReport;
 import com.lunarTC.lunarBackup.utils.DatabaseUtils;
 import com.lunarTC.lunarBackup.models.DatabaseConfig;
@@ -8,43 +7,36 @@ import com.lunarTC.lunarBackup.models.DatabaseConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.io.BufferedReader;
 import java.io.File;
-
+import java.io.InputStreamReader;
 import java.nio.file.Paths;
-
-import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-
-
-
-
 
 @Service
 public class BackupService {
+
     @Autowired
     private BackupReportService backupReportService;
-
 
     @Autowired
     private MailService mailService;
 
-
     public Boolean backupDatabase(DatabaseConfig config, String backupType) {
         try {
-            String backupDirectoryPath = DatabaseUtils.getBackupDirectoryPath(config,backupType);
+            String backupDirectoryPath = DatabaseUtils.getBackupDirectoryPath(config, backupType);
             File backupDir = new File(backupDirectoryPath);
+
             if (!backupDir.exists()) {
                 backupDir.mkdirs();
             }
-           LocalDateTime timestamp = LocalDateTime.now();
+
+            LocalDateTime timestamp = LocalDateTime.now();
             String backupFileName = Paths.get(backupDirectoryPath, config.getDatabaseName()).toString();
-
-
 
             ProcessBuilder processBuilder;
 
-            switch (config.getType().toLowerCase()){
+            switch (config.getType().toLowerCase()) {
                 case "mysql":
                 case "mariadb": {
                     backupFileName += ".sql";
@@ -80,7 +72,6 @@ public class BackupService {
                 case "mongo": {
                     String mongoDump = DatabaseUtils.getCachedDumpPath("mongodump");
 
-                    // Start building the base command
                     StringBuilder commandBuilder = new StringBuilder();
                     commandBuilder.append(mongoDump).append(" ")
                             .append("--host ").append(config.getHost()).append(" ")
@@ -91,43 +82,81 @@ public class BackupService {
                             .append("--db ").append(config.getDatabaseName()).append(" ")
                             .append("--out ").append(backupDirectoryPath).append(" ");
 
-                    // Exclude large collections if any
                     if (config.getLargeCollections() != null && !config.getLargeCollections().isEmpty()) {
                         for (String collection : config.getLargeCollections()) {
                             commandBuilder.append("--excludeCollection=").append(collection).append(" ");
                         }
                     }
 
-                    // Convert to command array for ProcessBuilder
                     String[] command = commandBuilder.toString().trim().split("\\s+");
-
                     processBuilder = new ProcessBuilder(command);
                     break;
                 }
 
-
                 default:
-                    System.out.println("Unsupported database backupType: " + config.getType()+". Skipping backup");
+                    System.out.println("Unsupported database backupType: " + config.getType() + ". Skipping backup");
                     return true;
             }
 
             processBuilder.redirectErrorStream(true);
             Process process = processBuilder.start();
+
+            // Send start email
+            String html1 = mailService.buildBackupSuccessEmail(config.getDatabaseName(), config.getType(), backupType, backupFileName);
+            mailService.sendHtmlEmail("adelselmi8@gmail.com", "Backup will start now", html1);
+
+            // ✅ FIX: Read process output using traditional Runnable syntax
+            BufferedReader stdOut = new BufferedReader(new InputStreamReader(process.getInputStream()));
+            BufferedReader stdErr = new BufferedReader(new InputStreamReader(process.getErrorStream()));
+
+            Thread stdOutReader = new Thread(new Runnable() {
+                public void run() {
+                    String line;
+                    try {
+                        while ((line = stdOut.readLine()) != null) {
+                            System.out.println("[STDOUT] " + line);
+                        }
+                    } catch (Exception e) {
+                        System.err.println("Error reading stdout: " + e.getMessage());
+                    }
+                }
+            });
+
+            Thread stdErrReader = new Thread(new Runnable() {
+                public void run() {
+                    String line;
+                    try {
+                        while ((line = stdErr.readLine()) != null) {
+                            System.err.println("[STDERR] " + line);
+                        }
+                    } catch (Exception e) {
+                        System.err.println("Error reading stderr: " + e.getMessage());
+                    }
+                }
+            });
+
+            stdOutReader.start();
+            stdErrReader.start();
+
             int exitCode = process.waitFor();
+            stdOutReader.join();
+            stdErrReader.join();
+
+            System.out.println("EXIT CODE IS :" + exitCode);
+
             if (exitCode == 0) {
-                System.out.println("Successful Backup: " +backupType+"   :" +config.getType());
+                System.out.println("Successful from service: " + backupType + "   :" + config.getType());
                 try {
                     String html = mailService.buildBackupSuccessEmail(config.getDatabaseName(), config.getType(), backupType, backupFileName);
                     mailService.sendHtmlEmail("adelselmi8@gmail.com", "✅ Backup Completed", html);
-
-                } catch(Exception e){
-                    System.out.println("Mail failed"+e.getMessage());
+                } catch (Exception e) {
+                    System.out.println("Mail failed: " + e.getMessage());
                 }
-                backupReportService.addReport(new BackupReport(config.getDatabaseName(), config.getType(), backupType, backupFileName, timestamp,"SUCCESS"));
-                    return true;
+                backupReportService.addReport(new BackupReport(config.getDatabaseName(), config.getType(), backupType, backupFileName, timestamp, "SUCCESS"));
+                return true;
             } else {
-                System.out.println("Failed Backup: " +backupType+"   :" + config.getDatabaseName() + " ======> " + config.getType() );
-                backupReportService.addReport(new BackupReport(config.getDatabaseName(), config.getType(), backupType, "N/A", timestamp,"FAILED"));
+                System.out.println("Failed from service: " + backupType + "   :" + config.getDatabaseName() + " ======> " + config.getType());
+                backupReportService.addReport(new BackupReport(config.getDatabaseName(), config.getType(), backupType, "N/A", timestamp, "FAILED"));
                 try {
                     String errorBody = mailService.buildBackupFailureEmail(
                             config.getDatabaseName(),
@@ -135,24 +164,18 @@ public class BackupService {
                             backupType,
                             "Exit code != 0 or dump process failed."
                     );
-
                     mailService.sendHtmlEmail("adelselmi8@gmail.com", "❌ Backup Failed", errorBody);
-
-                }
-                catch (Exception e)
-                {
-                    System.out.println("Mail failed"+e.getMessage());
+                } catch (Exception e) {
+                    System.out.println("Mail failed: " + e.getMessage());
                 }
                 return false;
-                }
+            }
 
-        } catch ( Exception e) {
+        } catch (Exception e) {
             System.err.println("Error while performing backup: " + e.getMessage());
         }
+
+        System.out.println("Last instruction in the backupDatabase method");
         return false;
     }
-
-
-
-
 }

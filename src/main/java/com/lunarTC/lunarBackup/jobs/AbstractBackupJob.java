@@ -34,16 +34,26 @@ public abstract class AbstractBackupJob implements Job {
 
             if (shouldRunBackup(config)) {
 
-                System.out.println("Running backup for: " + config.getDatabaseName());
+                System.out.println( "Running "+ config.getDatabaseName()+"   "+getBackupType());
                 boolean backupSucceeded= backupService.backupDatabase(config, getBackupType());
                 if(!backupSucceeded)
                 {
                     if(!failedDatabases.contains(config)) {
                         failedDatabases.add(config);
-                    }                }
+                        System.out.println( "Failed from job "+ config.getDatabaseName()+"   "+getBackupType());
+
+                    }
+                } else if (backupSucceeded) {
+                    System.out.println( "Successful from job "+ config.getDatabaseName()+"   "+getBackupType());
+
+
+                }
+
+
             }
 
         }
+
 
         if( ! failedDatabases.isEmpty()){
             try {

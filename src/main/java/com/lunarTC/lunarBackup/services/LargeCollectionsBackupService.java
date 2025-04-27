@@ -54,7 +54,7 @@ public class LargeCollectionsBackupService {
                 command.add("--authenticationDatabase"); command.add(config.getAuthenticationDatabase());
                 command.add("--db"); command.add(config.getDatabaseName());
                 command.add("--collection"); command.add(collection);
-                command.add("--query"); command.add("{ \"_id\": { \"$gte\": { \"$oid\": \"" + MIN_OBJECT_ID + "\" } } }");
+                //command.add("--query"); command.add("{ \"_id\": { \"$gte\": { \"$oid\": \"" + MIN_OBJECT_ID + "\" } } }");
                 command.add("--out"); command.add(backupDirectoryPath);
 
                 System.out.println("Executing mongodump for collection: " + collection);
