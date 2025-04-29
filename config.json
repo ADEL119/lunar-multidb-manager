@@ -1,11 +1,11 @@
 {
   "notificationConfig": {
     "notificationSummaryEmailToList": [
-      "selmi4454@gmail.com"
+      "adelselmi8@gmail.com","6tory@chefalicious.com"
     ],
     "notificationEmailFrom": "adelselmi8@gmail.com",
     "notificationSenderViewName": "Lunar DB Backup Notifications",
-    "notificationEmailPassword": "ogfy roqi plzy ffqh",
+    "notificationEmailPassword": "djqg bpat lfni dvqu",
     "notificationSmtpHost": "smtp.gmail.com",
     "notificationSmtpPort": 587,
     "notificationSmtpAuth": true,
@@ -19,7 +19,8 @@
       "username": "testpguser",
       "password": "testpgpass",
       "databaseName": "testpg",
-      "backupPath": "/home/adel/Desktop/tryBackups/testpg",
+      "backupPath": "/home/adel/Desktop/new",
+      "emailList": ["adelselmi8@gmail.com"],
       "daily": true,
       "weekly": true,
       "monthly": false
@@ -31,7 +32,8 @@
       "username": "testuser",
       "password": "testpass",
       "databaseName": "testdb",
-      "backupPath": "/home/adel/Desktop/tryBackups/testdb",
+      "backupPath": "/home/adel/Desktop/new",
+      "emailList": ["adelselmi8@gmail.com"],
       "daily": true,
       "weekly": false,
       "monthly": true
@@ -44,12 +46,13 @@
       "databaseName": "gestion_emp",
       "username": "adminUser",
       "password": "adminPassword",
-      "backupPath": "/home/adel/Desktop/doubleDB/gestion_emp",
+      "backupPath": "/home/adel/Desktop/new",
       "largeCollections": [
         "employees",
         "departments"
       ],
       "backupLargeCollections": true,
+      "emailList": ["adelselmi8@gmail.com"],
       "daily": true,
       "weekly": true,
       "monthly": false
@@ -61,9 +64,10 @@
       "databaseName": "location",
       "username": "adminUser",
       "password": "adminPassword",
-      "backupPath": "/home/adel/Desktop/doubleDB/location",
+      "backupPath": "/home/adel/Desktop/new",
       "largeCollections": [],
       "backupLargeCollections": true,
+      "emailList": ["adelselmi8@gmail.com"],
       "daily": true,
       "weekly": false,
       "monthly": false
@@ -76,7 +80,8 @@
       "username": "root",
       "password": "adel",
       "databaseName": "product",
-      "backupPath": "/home/adel/Desktop/tryBackups/product",
+      "backupPath": "/home/adel/Desktop/new",
+      "emailList": ["adelselmi8@gmail.com"],
       "daily": true,
       "weekly": false,
       "monthly": true

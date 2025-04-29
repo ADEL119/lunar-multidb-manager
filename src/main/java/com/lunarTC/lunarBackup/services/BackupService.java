@@ -103,7 +103,7 @@ public class BackupService {
 
             // Send start email
             String html1 = mailService.buildBackupSuccessEmail(config.getDatabaseName(), config.getType(), backupType, backupFileName);
-            mailService.sendHtmlEmail("adelselmi8@gmail.com", "Backup will start now", html1);
+
 
             // ✅ FIX: Read process output using traditional Runnable syntax
             BufferedReader stdOut = new BufferedReader(new InputStreamReader(process.getInputStream()));
@@ -148,7 +148,10 @@ public class BackupService {
                 System.out.println("Successful from service: " + backupType + "   :" + config.getType());
                 try {
                     String html = mailService.buildBackupSuccessEmail(config.getDatabaseName(), config.getType(), backupType, backupFileName);
-                    mailService.sendHtmlEmail("adelselmi8@gmail.com", "✅ Backup Completed", html);
+                    String subject="✅ Successful : "+config.getDatabaseName()+" : "+backupType;
+                    for(String emailTo : config.getEmailList()) {
+                        mailService.sendHtmlEmail(emailTo,subject, html);
+                    }
                 } catch (Exception e) {
                     System.out.println("Mail failed: " + e.getMessage());
                 }
@@ -164,7 +167,12 @@ public class BackupService {
                             backupType,
                             "Exit code != 0 or dump process failed."
                     );
-                    mailService.sendHtmlEmail("adelselmi8@gmail.com", "❌ Backup Failed", errorBody);
+                    String subject="❌ Failed : "+config.getDatabaseName()+" : "+backupType;
+
+
+                    for(String emailTo : config.getEmailList()) {
+                        mailService.sendHtmlEmail(emailTo, subject, errorBody);
+                    }
                 } catch (Exception e) {
                     System.out.println("Mail failed: " + e.getMessage());
                 }

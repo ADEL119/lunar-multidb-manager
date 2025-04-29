@@ -2,7 +2,9 @@ package com.lunarTC.lunarBackup.jobs;
 
 import com.lunarTC.lunarBackup.configs.GlobalConfigLoader;
 import com.lunarTC.lunarBackup.models.DatabaseConfig;
+import com.lunarTC.lunarBackup.models.GlobalConfig;
 import com.lunarTC.lunarBackup.services.BackupService;
+import com.lunarTC.lunarBackup.services.MailService;
 import org.quartz.Job;
 import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
@@ -19,13 +21,18 @@ public abstract class AbstractBackupJob implements Job {
     @Autowired
     private GlobalConfigLoader globalConfigLoader;
 
+    @Autowired
+    private MailService mailService;
 
 
     @Override
     public void execute(JobExecutionContext context) throws JobExecutionException {
 
 
-        List<DatabaseConfig> databaseConfigs = globalConfigLoader.loadGlobalConfig().getDatabaseConfigList();
+        GlobalConfig globalConfig=globalConfigLoader.loadGlobalConfig();
+
+        List<DatabaseConfig> databaseConfigs = globalConfig.getDatabaseConfigList();
+
         List<DatabaseConfig> failedDatabases=new ArrayList<>();
 
 
@@ -54,11 +61,20 @@ public abstract class AbstractBackupJob implements Job {
 
         }
 
+        List<String> summaryEmailList = globalConfig.getNotificationConfig().getNotificationSummaryEmailToList();
+
+        if (summaryEmailList != null && !summaryEmailList.isEmpty()) {
+            for (String emailTo : summaryEmailList) {
+                mailService.sendBackupSummaryEmail(emailTo, failedDatabases, databaseConfigs.size());
+            }
+        }
+
+
 
         if( ! failedDatabases.isEmpty()){
             try {
                 System.out.println("There are "+failedDatabases.size()+" databases,retry them after 1 hour");
-                Thread.sleep(20000); //1 hour
+                Thread.sleep(3600000); //1 hour
             } catch (InterruptedException e) {
                 throw new RuntimeException("Retry sleep interrupted",e);
             }
