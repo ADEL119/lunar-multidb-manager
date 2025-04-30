@@ -4695,4 +4695,74 @@
   "filePath" : "/home/adel/Desktop/new/product/Daily/2-Mardi/product.sql",
   "timestamp" : [ 2025, 4, 29, 7, 52, 9, 25557623 ],
   "status" : "SUCCESS"
+}, {
+  "databaseName" : "testpg",
+  "type" : "postgres",
+  "frequency" : "Manual",
+  "filePath" : "/home/adel/Desktop/new/testpg/Manual/testpg.backup",
+  "timestamp" : [ 2025, 4, 29, 12, 2, 16, 630854662 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Manual",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 29, 12, 2, 18, 973783220 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "Manual",
+  "filePath" : "/home/adel/Desktop/new/gestion_emp/Manual/gestion_emp",
+  "timestamp" : [ 2025, 4, 29, 12, 2, 20, 539209974 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "location",
+  "type" : "mongo",
+  "frequency" : "Manual",
+  "filePath" : "/home/adel/Desktop/new/location/Manual/location",
+  "timestamp" : [ 2025, 4, 29, 12, 2, 22, 9467663 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "product",
+  "type" : "mysql",
+  "frequency" : "Manual",
+  "filePath" : "/home/adel/Desktop/new/product/Manual/product.sql",
+  "timestamp" : [ 2025, 4, 29, 12, 2, 23, 575743084 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testpg",
+  "type" : "postgres",
+  "frequency" : "Manual",
+  "filePath" : "/home/adel/Desktop/new/testpg/Manual/testpg.backup",
+  "timestamp" : [ 2025, 4, 29, 13, 30, 47, 960036795 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Manual",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 4, 29, 13, 30, 51, 326135357 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "Manual",
+  "filePath" : "/home/adel/Desktop/new/gestion_emp/Manual/gestion_emp",
+  "timestamp" : [ 2025, 4, 29, 13, 30, 53, 696175613 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "location",
+  "type" : "mongo",
+  "frequency" : "Manual",
+  "filePath" : "/home/adel/Desktop/new/location/Manual/location",
+  "timestamp" : [ 2025, 4, 29, 13, 30, 55, 14059972 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "product",
+  "type" : "mysql",
+  "frequency" : "Manual",
+  "filePath" : "/home/adel/Desktop/new/product/Manual/product.sql",
+  "timestamp" : [ 2025, 4, 29, 13, 30, 56, 314679199 ],
+  "status" : "SUCCESS"
 } ]

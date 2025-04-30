@@ -15,7 +15,11 @@ public class DatabaseUtils {
     private static String postgresDumpPath;
     private static String mongoDumpPath;
 
-    public static String getDumpPath(String tool) throws Exception {
+    private static String mysqlRestorePath;
+    private static String postgresRestorePath;
+    private static String mongoRestorePath;
+
+    public static String getToolPath(String tool) throws Exception {
         String os = System.getProperty("os.name").toLowerCase();
         String command = os.contains("win") ? "where " + tool : "which " + tool;
 
@@ -31,24 +35,41 @@ public class DatabaseUtils {
     public static String getCachedDumpPath(String tool) throws Exception {
         return switch (tool.toLowerCase()) {
             case "mysqldump" -> {
-                if (mysqlDumpPath == null) mysqlDumpPath = getDumpPath(tool);
+                if (mysqlDumpPath == null) mysqlDumpPath = getToolPath(tool);
                 yield mysqlDumpPath;
             }
             case "pg_dump" -> {
-                if (postgresDumpPath == null) postgresDumpPath = getDumpPath(tool);
+                if (postgresDumpPath == null) postgresDumpPath = getToolPath(tool);
                 yield postgresDumpPath;
             }
             case "mongodump" -> {
-                if (mongoDumpPath == null) mongoDumpPath = getDumpPath(tool);
+                if (mongoDumpPath == null) mongoDumpPath = getToolPath(tool);
                 yield mongoDumpPath;
             }
-            default -> throw new IllegalArgumentException("Unknown tool: " + tool);
+            default -> throw new IllegalArgumentException("Unknown dump tool: " + tool);
         };
     }
 
-    public static String getBackupDirectoryPath(DatabaseConfig config,String frequency) {
+    public static String getCachedRestorePath(String tool) throws Exception {
+        return switch (tool.toLowerCase()) {
+            case "mysql" -> {
+                if (mysqlRestorePath == null) mysqlRestorePath = getToolPath(tool);
+                yield mysqlRestorePath;
+            }
+            case "pg_restore" -> {
+                if (postgresRestorePath == null) postgresRestorePath = getToolPath(tool);
+                yield postgresRestorePath;
+            }
+            case "mongorestore" -> {
+                if (mongoRestorePath == null) mongoRestorePath = getToolPath(tool);
+                yield mongoRestorePath;
+            }
+            default -> throw new IllegalArgumentException("Unknown restore tool: " + tool);
+        };
+    }
+
+    public static String getBackupDirectoryPath(DatabaseConfig config, String frequency) {
         String basePath = config.getBackupPath();
-//        basePath+=config.getDatabaseName();
         Calendar calendar = Calendar.getInstance();
         Date now = new Date();
         calendar.setTime(now);
@@ -71,7 +92,7 @@ public class DatabaseUtils {
             }
             case "weekly" -> {
                 int weekOfMonth = calendar.get(Calendar.WEEK_OF_MONTH);
-                yield Paths.get(basePath,config.getDatabaseName(), "Weekly", "Week" + weekOfMonth).toString();
+                yield Paths.get(basePath, config.getDatabaseName(), "Weekly", "Week" + weekOfMonth).toString();
             }
             case "monthly" -> {
                 int month = calendar.get(Calendar.MONTH) + 1;
@@ -92,7 +113,7 @@ public class DatabaseUtils {
                 };
                 yield Paths.get(basePath, "Monthly", monthName).toString();
             }
-            default -> Paths.get(basePath,config.getDatabaseName(), frequency).toString();
+            default -> Paths.get(basePath, config.getDatabaseName(), frequency).toString();
         };
     }
 }

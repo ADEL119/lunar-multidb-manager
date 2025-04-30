@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.InputStreamReader;
-import java.nio.file.Paths;
 
 @Service
 public class RestoreService {
@@ -20,7 +19,7 @@ public class RestoreService {
             switch (databaseType) {
                 case "mysql":
                 case "mariadb": {
-                    String mysql = DatabaseUtils.getCachedDumpPath("mysql");
+                    String mysql = DatabaseUtils.getCachedRestorePath("mysql");
                     processBuilder = new ProcessBuilder(
                             mysql,
                             "-h", config.getHost(),
@@ -29,20 +28,19 @@ public class RestoreService {
                             "-p" + config.getPassword(),
                             config.getDatabaseName()
                     );
-                    // Redirect input from the SQL file
                     processBuilder.redirectInput(new File(backupSource));
                     break;
                 }
 
                 case "postgres": {
-                    String pgRestore = DatabaseUtils.getCachedDumpPath("pg_restore");
+                    String pgRestore = DatabaseUtils.getCachedRestorePath("pg_restore");
                     processBuilder = new ProcessBuilder(
                             pgRestore,
                             "-h", config.getHost(),
                             "-p", String.valueOf(config.getPort()),
                             "-U", config.getUsername(),
                             "-d", config.getDatabaseName(),
-                            "-c",  // Clean (drop) database objects before recreating
+                            "-c",  // Clean before restore
                             backupSource
                     );
                     processBuilder.environment().put("PGPASSWORD", config.getPassword());
@@ -50,7 +48,7 @@ public class RestoreService {
                 }
 
                 case "mongo": {
-                    String mongoRestore = DatabaseUtils.getCachedDumpPath("mongorestore");
+                    String mongoRestore = DatabaseUtils.getCachedRestorePath("mongorestore");
                     processBuilder = new ProcessBuilder(
                             mongoRestore,
                             "--host", config.getHost(),
@@ -59,7 +57,7 @@ public class RestoreService {
                             "-p", config.getPassword(),
                             "--authenticationDatabase", config.getAuthenticationDatabase(),
                             "--db", config.getDatabaseName(),
-                            "--drop",   // Drop before restoring
+                            "--drop",
                             backupSource
                     );
                     break;

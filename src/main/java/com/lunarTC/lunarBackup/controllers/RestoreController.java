@@ -7,10 +7,7 @@ import com.lunarTC.lunarBackup.models.GlobalConfig;
 import com.lunarTC.lunarBackup.services.BackupService;
 import com.lunarTC.lunarBackup.services.RestoreService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -24,8 +21,8 @@ public class RestoreController {
     @Autowired
     RestoreService restoreService;
 
-    @GetMapping
-    public String restoreDatabase(@PathVariable String dbName,@PathVariable String dbType,@PathVariable String dataSource){
+    @GetMapping("/{dbName}/{dbType}")
+    public String restoreDatabase(@PathVariable String dbName,@PathVariable String dbType,@RequestParam String dataSource){
 
         GlobalConfig globalConfig=globalConfigLoader.loadGlobalConfig();
 
@@ -51,6 +48,7 @@ public class RestoreController {
 
 
 
+
             }
 
         }
@@ -59,6 +57,7 @@ public class RestoreController {
 
 
 
+    return "finish";
     }
 
 
