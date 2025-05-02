@@ -7,6 +7,7 @@ import java.util.List;
 
 @Data
 public class GlobalConfig {
+    
 
     private EmailConfig notificationConfig;
     private List<DatabaseConfig> databaseConfigList;

@@ -14,6 +14,7 @@ public class EmailConfigProvider {
 
     @Bean
     public EmailConfig emailConfig() {
+
         return globalConfigLoader.loadGlobalConfig().getNotificationConfig();
     }
 }

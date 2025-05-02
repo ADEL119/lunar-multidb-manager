@@ -33,7 +33,7 @@
       "password": "testpass",
       "databaseName": "testdb",
       "backupPath": "/home/adel/Desktop/new",
-      "emailList": ["adelselmi8@gmail.com"],
+      "emailList": ["adelselmi8@gmail.com","Malakselmi81@gmail.com"],
       "daily": true,
       "weekly": false,
       "monthly": true

@@ -145,7 +145,7 @@ public class BackupService {
             System.out.println("EXIT CODE IS :" + exitCode);
 
             if (exitCode == 0) {
-                System.out.println("Successful from service: " + backupType + "   :" + config.getType());
+                System.out.println("Successful: " + backupType + "   :" + config.getDatabaseName() + " ======> " + config.getType());
                 try {
                     String html = mailService.buildBackupSuccessEmail(config.getDatabaseName(), config.getType(), backupType, backupFileName);
                     String subject="✅ Successful : "+config.getDatabaseName()+" : "+backupType;

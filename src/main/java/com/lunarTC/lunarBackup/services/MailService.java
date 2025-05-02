@@ -131,6 +131,54 @@ public class MailService {
             System.err.println("Failed to send backup summary email: " + e.getMessage());
         }
     }
+    public void sendRetrySummaryEmail(String to, List<DatabaseConfig> stillFailedDatabases, int initialFailedCount, int retryAttempts) {
+        try {
+            int recoveredCount = initialFailedCount - stillFailedDatabases.size();
+            double recoveryRate = (initialFailedCount == 0) ? 0 : (recoveredCount * 100.0 / initialFailedCount);
+
+            String subject = String.format("%.0f%% of Failed Backups Recovered", recoveryRate);
+
+            StringBuilder htmlContent = new StringBuilder();
+            htmlContent.append("""
+        <html>
+        <body style="font-family: Arial, sans-serif; padding: 20px;">
+        <div style="border: 1px solid #e0e0e0; border-radius: 8px; padding: 20px;">
+            <h2>Retry Summary</h2>
+            <p><strong>Initial Failed Databases:</strong> %d</p>
+            <p><strong>Recovered after Retry:</strong> %d</p>
+            <p><strong>Still Failing:</strong> %d</p>
+            <p><strong>Total Retry Attempts:</strong> %d</p>
+        """.formatted(initialFailedCount, recoveredCount, stillFailedDatabases.size(), retryAttempts));
+
+            if (!stillFailedDatabases.isEmpty()) {
+                htmlContent.append("<h3 style='color: red;'>Databases That Still Failed:</h3><ul>");
+                for (DatabaseConfig config : stillFailedDatabases) {
+                    htmlContent.append("<li>")
+                            .append(config.getDatabaseName())
+                            .append(" (")
+                            .append(config.getType())
+                            .append(")</li>");
+                }
+                htmlContent.append("</ul>");
+            } else {
+                htmlContent.append("<p style='color: green;'>All failed backups were successfully recovered ✅</p>");
+            }
+
+            htmlContent.append("""
+            <hr>
+            <p style="font-size: 0.9em; color: #888;">This is an automated retry summary notification.</p>
+        </div>
+        </body>
+        </html>
+        """);
+
+            sendHtmlEmail(to, subject, htmlContent.toString());
+
+        } catch (Exception e) {
+            System.err.println("Failed to send retry summary email: " + e.getMessage());
+        }
+    }
+
 
 
 }

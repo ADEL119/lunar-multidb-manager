@@ -20,4 +20,5 @@ public class QuartzConfig {
         factory.setJobFactory(jobFactory);  // this is the fix
         return factory;
     }
+
 }
