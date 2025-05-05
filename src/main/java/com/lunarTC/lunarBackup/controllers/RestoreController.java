@@ -4,7 +4,6 @@ package com.lunarTC.lunarBackup.controllers;
 import com.lunarTC.lunarBackup.configs.GlobalConfigLoader;
 import com.lunarTC.lunarBackup.models.DatabaseConfig;
 import com.lunarTC.lunarBackup.models.GlobalConfig;
-import com.lunarTC.lunarBackup.services.BackupService;
 import com.lunarTC.lunarBackup.services.RestoreService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -30,7 +29,7 @@ public class RestoreController {
 
         for(DatabaseConfig dbConfig :databaseConfigs){
 
-            if(dbConfig.getDatabaseName().equalsIgnoreCase(dbName) && dbConfig.getType().equalsIgnoreCase(dbType))
+            if(dbConfig.getDatabase().equalsIgnoreCase(dbName) && dbConfig.getType().equalsIgnoreCase(dbType))
             {
 
                 boolean restoreSucceeded=restoreService.restoreDatabase(dbConfig,dataSource);

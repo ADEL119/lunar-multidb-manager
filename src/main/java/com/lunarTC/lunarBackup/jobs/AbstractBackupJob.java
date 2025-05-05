@@ -92,7 +92,7 @@ public abstract class AbstractBackupJob implements Job {
                     if (shouldRunBackup(config)) {
 
 
-                        System.out.println("Retry: " + getBackupType() + "   :" + config.getDatabaseName() + " ======> " + config.getType());
+                        System.out.println("Retry: " + getBackupType() + "   :" + config.getDatabase() + " ======> " + config.getType());
                         boolean backupSucceeded = backupService.backupDatabase(config, getBackupType());
                         if (backupSucceeded) {
                             iterator.remove();

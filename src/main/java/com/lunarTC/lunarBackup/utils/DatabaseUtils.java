@@ -1,6 +1,7 @@
 package com.lunarTC.lunarBackup.utils;
 
 import com.lunarTC.lunarBackup.models.DatabaseConfig;
+import com.lunarTC.lunarBackup.models.GlobalConfig;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -68,8 +69,8 @@ public class DatabaseUtils {
         };
     }
 
-    public static String getBackupDirectoryPath(DatabaseConfig config, String frequency) {
-        String basePath = config.getBackupPath();
+    public static String getBackupDirectoryPath(GlobalConfig globalConfig,DatabaseConfig config, String frequency) {
+        String basePath = globalConfig.getPathDirectory();
         Calendar calendar = Calendar.getInstance();
         Date now = new Date();
         calendar.setTime(now);
@@ -88,11 +89,11 @@ public class DatabaseUtils {
                     case 7 -> "7-Dimanche";
                     default -> throw new IllegalArgumentException("Invalid day number");
                 };
-                yield Paths.get(basePath, config.getDatabaseName(), "Daily", dayName).toString();
+                yield Paths.get(basePath, config.getDatabase(), "Daily", dayName).toString();
             }
             case "weekly" -> {
                 int weekOfMonth = calendar.get(Calendar.WEEK_OF_MONTH);
-                yield Paths.get(basePath, config.getDatabaseName(), "Weekly", "Week" + weekOfMonth).toString();
+                yield Paths.get(basePath, config.getDatabase(), "Weekly", "Week" + weekOfMonth).toString();
             }
             case "monthly" -> {
                 int month = calendar.get(Calendar.MONTH) + 1;
@@ -113,7 +114,7 @@ public class DatabaseUtils {
                 };
                 yield Paths.get(basePath, "Monthly", monthName).toString();
             }
-            default -> Paths.get(basePath, config.getDatabaseName(), frequency).toString();
+            default -> Paths.get(basePath, config.getDatabase(), frequency).toString();
         };
     }
 }

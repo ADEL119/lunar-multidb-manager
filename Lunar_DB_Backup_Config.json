@@ -1,0 +1,50 @@
+{
+  "pathDirectory":"/home/adel/Desktop/lunarBackup",
+  "notificationConfig": {
+    "notificationSummaryEmailToList": [
+      "adelselmi8@gmail.com"
+    ],
+    "notificationEmailFrom": "adelselmi8@gmail.com",
+    "notificationSenderViewName": "Lunar DB Backup Notifications",
+    "notificationEmailPassword": "djqg bpat lfni dvqu",
+    "notificationSmtpHost": "smtp.gmail.com",
+    "notificationSmtpPort": 587,
+    "notificationSmtpAuth": true,
+    "notificationStartTlsEnable": true
+  },
+  "databaseConfigList": [
+
+
+    {
+      "host": "localhost",
+      "port": 27017,
+      "authenticationDatabase": "admin",
+      "database": "gestion_emp",
+      "username": "adminUser",
+      "password": "adminPassword",
+      "largeCollections": [
+        "employees",
+        "departments"
+      ],
+      "backupLargeCollections": true,
+      "emailList": ["adelselmi8@gmail.com"],
+      "daily": true,
+      "weekly": true,
+      "monthly": false
+    },{
+      "host": "localhost",
+      "port": 27017,
+      "authenticationDatabase": "admin",
+      "database": "location",
+      "username": "adminUser",
+      "password": "adminPassword",
+      "largeCollections": [],
+      "backupLargeCollections": true,
+      "emailList": ["adelselmi8@gmail.com"],
+      "daily": true,
+      "weekly": false,
+      "monthly": false
+    }
+  ]
+}
+

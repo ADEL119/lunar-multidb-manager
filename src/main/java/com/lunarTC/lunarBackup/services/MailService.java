@@ -110,7 +110,7 @@ public class MailService {
             if (!failedDatabases.isEmpty()) {
                 htmlContent.append("<h3 style='color: red;'>Failed Databases:</h3><ul>");
                 for (DatabaseConfig config : failedDatabases) {
-                    htmlContent.append("<li>").append(config.getDatabaseName()).append(" (").append(config.getType()).append(")</li>");
+                    htmlContent.append("<li>").append(config.getDatabase()).append(" (").append(config.getType()).append(")</li>");
                 }
                 htmlContent.append("</ul>");
             } else {
@@ -154,7 +154,7 @@ public class MailService {
                 htmlContent.append("<h3 style='color: red;'>Databases That Still Failed:</h3><ul>");
                 for (DatabaseConfig config : stillFailedDatabases) {
                     htmlContent.append("<li>")
-                            .append(config.getDatabaseName())
+                            .append(config.getDatabase())
                             .append(" (")
                             .append(config.getType())
                             .append(")</li>");

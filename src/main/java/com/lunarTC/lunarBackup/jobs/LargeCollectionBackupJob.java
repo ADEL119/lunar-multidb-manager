@@ -29,7 +29,7 @@ public class LargeCollectionBackupJob implements Job {
 
         for (DatabaseConfig config : databaseConfigs) {
             if (shouldRunLargeCollections(config)) {
-                System.out.println("Running largeCollections backup for: " + config.getDatabaseName());
+                System.out.println("Running largeCollections backup for: " + config.getDatabase());
                 boolean backupSucceeded = largeCollectionsBackupService.backupLargeCollections(config, "Large_Collections");
                 if (!backupSucceeded) {
                     if (!failedDatabases.contains(config)) {
@@ -62,7 +62,7 @@ public class LargeCollectionBackupJob implements Job {
                     if (shouldRunLargeCollections(config)) {
 
 
-                        System.out.println("Retry backup for: " + config.getDatabaseName());
+                        System.out.println("Retry backup for: " + config.getDatabase());
                         boolean backupSucceeded = largeCollectionsBackupService.backupLargeCollections(config, "Large_Collections");
                         if (backupSucceeded) {
                             iterator.remove();

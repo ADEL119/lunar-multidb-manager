@@ -1,6 +1,8 @@
 package com.lunarTC.lunarBackup.services;
 
+import com.lunarTC.lunarBackup.configs.GlobalConfigLoader;
 import com.lunarTC.lunarBackup.models.BackupReport;
+import com.lunarTC.lunarBackup.models.GlobalConfig;
 import com.lunarTC.lunarBackup.utils.DatabaseUtils;
 import com.lunarTC.lunarBackup.models.DatabaseConfig;
 
@@ -22,9 +24,14 @@ public class BackupService {
     @Autowired
     private MailService mailService;
 
+    @Autowired
+    private GlobalConfigLoader globalConfigLoader;
+
     public Boolean backupDatabase(DatabaseConfig config, String backupType) {
         try {
-            String backupDirectoryPath = DatabaseUtils.getBackupDirectoryPath(config, backupType);
+            GlobalConfig globalConfig = globalConfigLoader.loadGlobalConfig();
+
+            String backupDirectoryPath = DatabaseUtils.getBackupDirectoryPath(globalConfig, config,backupType);
             File backupDir = new File(backupDirectoryPath);
 
             if (!backupDir.exists()) {
@@ -32,7 +39,7 @@ public class BackupService {
             }
 
             LocalDateTime timestamp = LocalDateTime.now();
-            String backupFileName = Paths.get(backupDirectoryPath, config.getDatabaseName()).toString();
+            String backupFileName = Paths.get(backupDirectoryPath, config.getDatabase()).toString();
 
             ProcessBuilder processBuilder;
 
@@ -47,7 +54,7 @@ public class BackupService {
                             "-P", String.valueOf(config.getPort()),
                             "-u", config.getUsername(),
                             "--password=" + config.getPassword(),
-                            config.getDatabaseName(),
+                            config.getDatabase(),
                             "-r", backupFileName
                     );
                     break;
@@ -63,7 +70,7 @@ public class BackupService {
                             "-U", config.getUsername(),
                             "-F", "c",
                             "-f", backupFileName,
-                            config.getDatabaseName()
+                            config.getDatabase()
                     );
                     processBuilder.environment().put("PGPASSWORD", config.getPassword());
                     break;
@@ -79,7 +86,7 @@ public class BackupService {
                             .append("-u ").append(config.getUsername()).append(" ")
                             .append("-p ").append(config.getPassword()).append(" ")
                             .append("--authenticationDatabase ").append(config.getAuthenticationDatabase()).append(" ")
-                            .append("--db ").append(config.getDatabaseName()).append(" ")
+                            .append("--db ").append(config.getDatabase()).append(" ")
                             .append("--out ").append(backupDirectoryPath).append(" ");
 
                     if (config.getLargeCollections() != null && !config.getLargeCollections().isEmpty()) {
@@ -102,7 +109,7 @@ public class BackupService {
             Process process = processBuilder.start();
 
             // Send start email
-            String html1 = mailService.buildBackupSuccessEmail(config.getDatabaseName(), config.getType(), backupType, backupFileName);
+            String html1 = mailService.buildBackupSuccessEmail(config.getDatabase(), config.getType(), backupType, backupFileName);
 
 
             // ✅ FIX: Read process output using traditional Runnable syntax
@@ -145,29 +152,29 @@ public class BackupService {
             System.out.println("EXIT CODE IS :" + exitCode);
 
             if (exitCode == 0) {
-                System.out.println("Successful: " + backupType + "   :" + config.getDatabaseName() + " ======> " + config.getType());
+                System.out.println("Successful: " + backupType + "   :" + config.getDatabase() + " ======> " + config.getType());
                 try {
-                    String html = mailService.buildBackupSuccessEmail(config.getDatabaseName(), config.getType(), backupType, backupFileName);
-                    String subject="✅ Successful : "+config.getDatabaseName()+" : "+backupType;
+                    String html = mailService.buildBackupSuccessEmail(config.getDatabase(), config.getType(), backupType, backupFileName);
+                    String subject="✅ Successful : "+config.getDatabase()+" : "+backupType;
                     for(String emailTo : config.getEmailList()) {
                         mailService.sendHtmlEmail(emailTo,subject, html);
                     }
                 } catch (Exception e) {
                     System.out.println("Mail failed: " + e.getMessage());
                 }
-                backupReportService.addReport(new BackupReport(config.getDatabaseName(), config.getType(), backupType, backupFileName, timestamp, "SUCCESS"));
+                backupReportService.addReport(new BackupReport(config.getDatabase(), config.getType(), backupType, backupFileName, timestamp, "SUCCESS"));
                 return true;
             } else {
-                System.out.println("Failed from service: " + backupType + "   :" + config.getDatabaseName() + " ======> " + config.getType());
-                backupReportService.addReport(new BackupReport(config.getDatabaseName(), config.getType(), backupType, "N/A", timestamp, "FAILED"));
+                System.out.println("Failed from service: " + backupType + "   :" + config.getDatabase() + " ======> " + config.getType());
+                backupReportService.addReport(new BackupReport(config.getDatabase(), config.getType(), backupType, "N/A", timestamp, "FAILED"));
                 try {
                     String errorBody = mailService.buildBackupFailureEmail(
-                            config.getDatabaseName(),
+                            config.getDatabase(),
                             config.getType(),
                             backupType,
                             "Exit code != 0 or dump process failed."
                     );
-                    String subject="❌ Failed : "+config.getDatabaseName()+" : "+backupType;
+                    String subject="❌ Failed : "+config.getDatabase()+" : "+backupType;
 
 
                     for(String emailTo : config.getEmailList()) {

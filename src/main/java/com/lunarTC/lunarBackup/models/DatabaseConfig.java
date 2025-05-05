@@ -12,19 +12,31 @@ import java.util.List;
 public class DatabaseConfig implements Serializable {
     private static final long serialVersionUID = 1L; // Helps with versioning
 
-    private String type;
-    private String databaseName;
+    private String type="mongo";
+
     private String host;
+
     private int port;
+
     private String username;
+
     private String password;
+
     private String authenticationDatabase;
-    private String backupPath;
-    private List<String> largeCollections=new ArrayList<>();
-    private Boolean backupLargeCollections=true;
+
+    private String database;
+
+    private String shortName;
+
     private List<String> emailList=new ArrayList<>();
+
+
     private Boolean daily = true;
     private Boolean weekly = true;
     private Boolean monthly = true;
+
+    private List<String> largeCollections=new ArrayList<>();
+
+    private Boolean backupLargeCollections=true;
 
 }
