@@ -1,0 +1,15 @@
+[ {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "Manual",
+  "filePath" : "/home/adel/Desktop/lunarBackup/gestion_emp/Manual/gestion_emp",
+  "timestamp" : [ 2025, 5, 6, 8, 24, 42, 928543191 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "location",
+  "type" : "mongo",
+  "frequency" : "Manual",
+  "filePath" : "/home/adel/Desktop/lunarBackup/location/Manual/location",
+  "timestamp" : [ 2025, 5, 6, 8, 24, 45, 242743936 ],
+  "status" : "SUCCESS"
+} ]
