@@ -65,7 +65,7 @@ public abstract class AbstractBackupJob implements Job {
 
         if (summaryEmailList != null && !summaryEmailList.isEmpty()) {
             for (String emailTo : summaryEmailList) {
-                mailService.sendBackupSummaryEmail(emailTo, failedDatabases, databaseConfigs.size());
+                mailService.sendBackupSummaryEmail(emailTo, failedDatabases, databaseConfigs.size(),getBackupType());
             }
         }
 
@@ -115,7 +115,7 @@ public abstract class AbstractBackupJob implements Job {
             }
             if (summaryEmailList != null && !summaryEmailList.isEmpty()) {
                 for (String emailTo : summaryEmailList) {
-                    mailService.sendRetrySummaryEmail(emailTo, failedDatabases, initialFailedCount, tries);
+                    mailService.sendRetrySummaryEmail(emailTo, failedDatabases, initialFailedCount, tries,getBackupType());
                 }
             }
 

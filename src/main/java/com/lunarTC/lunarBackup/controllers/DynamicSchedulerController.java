@@ -62,7 +62,7 @@ public class DynamicSchedulerController {
             }
             if (summaryEmailList != null && !summaryEmailList.isEmpty()) {
                 for (String emailTo : summaryEmailList) {
-                    mailService.sendBackupSummaryEmail(emailTo, failedDatabases, configs.size());
+                    mailService.sendBackupSummaryEmail(emailTo, failedDatabases, configs.size(),"Manual");
                 }
             }
 

@@ -24,6 +24,9 @@ public class LargeCollectionsBackupService {
     @Autowired
     private GlobalConfigLoader globalConfigLoader;
 
+    @Autowired
+    private MailService mailService;
+
 
     // Replace this value later with a dynamic one based on last backup
     private static final String MIN_OBJECT_ID = "6774776b0000000000000000";
@@ -36,12 +39,12 @@ public class LargeCollectionsBackupService {
 
             List<String> largeCollections = config.getLargeCollections();
             if (largeCollections == null || largeCollections.isEmpty()) {
-                System.out.println("No large collections to back up for database: " + config.getDatabase());
+                System.out.println("No large collections to back up for database: " + config.getDatabase()+" "+ LocalDateTime.now());
                 return true;
             }
 
 
-            String backupDirectoryPath = DatabaseUtils.getBackupDirectoryPath(globalConfig,config, backupType);
+            String backupDirectoryPath = DatabaseUtils.getBackupDirectoryPath(globalConfig, config, backupType);
             File backupDir = new File(backupDirectoryPath);
             if (!backupDir.exists()) {
                 backupDir.mkdirs();
@@ -54,15 +57,23 @@ public class LargeCollectionsBackupService {
             for (String collection : largeCollections) {
                 List<String> command = new ArrayList<>();
                 command.add(mongoDump);
-                command.add("--host"); command.add(config.getHost());
-                command.add("--port"); command.add(String.valueOf(config.getPort()));
-                command.add("-u"); command.add(config.getUsername());
-                command.add("-p"); command.add(config.getPassword());
-                command.add("--authenticationDatabase"); command.add(config.getAuthenticationDatabase());
-                command.add("--db"); command.add(config.getDatabase());
-                command.add("--collection"); command.add(collection);
+                command.add("--host");
+                command.add(config.getHost());
+                command.add("--port");
+                command.add(String.valueOf(config.getPort()));
+                command.add("-u");
+                command.add(config.getUsername());
+                command.add("-p");
+                command.add(config.getPassword());
+                command.add("--authenticationDatabase");
+                command.add(config.getAuthenticationDatabase());
+                command.add("--db");
+                command.add(config.getDatabase());
+                command.add("--collection");
+                command.add(collection);
                 //command.add("--query"); command.add("{ \"_id\": { \"$gte\": { \"$oid\": \"" + MIN_OBJECT_ID + "\" } } }");
-                command.add("--out"); command.add(backupDirectoryPath);
+                command.add("--out");
+                command.add(backupDirectoryPath);
 
                 System.out.println("Executing mongodump for collection: " + collection);
                 System.out.println("Command: " + String.join(" ", command));
@@ -79,17 +90,46 @@ public class LargeCollectionsBackupService {
 
                 int exitCode = process.waitFor();
                 if (exitCode == 0) {
-                    System.out.println("✅ Backup succeeded for collection: " + collection);
-                    backupReportService.addReport(new BackupReport(config.getDatabase(), config.getType(), backupType, backupDirectoryPath, timestamp,"SUCCESS"));
+                    System.out.println("✅ Backup succeeded for collection: " + collection+" "+ LocalDateTime.now());
+                    backupReportService.addReport(new BackupReport(config.getDatabase(), config.getType(), backupType, backupDirectoryPath, timestamp, "SUCCESS"));
 
                 } else {
-                    System.err.println("❌ Backup failed for collection: " + collection);
-                    backupReportService.addReport(new BackupReport(config.getDatabase(), config.getType(), backupType, "N/A", timestamp,"FAILED"));
+                    System.err.println("❌ Backup failed for collection: " + collection+" "+ LocalDateTime.now());
+                    backupReportService.addReport(new BackupReport(config.getDatabase(), config.getType(), backupType, "N/A", timestamp, "FAILED"));
+
+                    try {
+                        String errorBody = mailService.buildBackupFailureEmail(
+                                config.getDatabase(),
+                                config.getType(),
+                                backupType,
+                                "Exit code != 0 or dump process failed."
+                        );
+                        String subject = "❌ Failed : " + config.getDatabase() + " : " + backupType;
+
+
+                        for (String emailTo : config.getEmailList()) {
+                            mailService.sendHtmlEmail(emailTo, subject, errorBody);
+                        }
+                    } catch (Exception e) {
+                        System.out.println("Mail failed: " + e.getMessage());
+                    }
+
 
                     return false;
                 }
 
                 Thread.sleep(3000);
+            }
+
+
+            try {
+                String html = mailService.buildBackupSuccessEmail(config.getDatabase(), config.getType(), backupType, backupDirectoryPath);
+                String subject="✅ Successful : "+config.getDatabase()+" : "+backupType;
+                for(String emailTo : config.getEmailList()) {
+                    mailService.sendHtmlEmail(emailTo,subject, html);
+                }
+            } catch (Exception e) {
+                System.out.println("Mail failed: " + e.getMessage());
             }
 
             return allSucceeded;

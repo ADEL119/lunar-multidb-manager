@@ -12,4 +12,67 @@
   "filePath" : "/home/adel/Desktop/lunarBackup/location/Manual/location",
   "timestamp" : [ 2025, 5, 6, 8, 24, 45, 242743936 ],
   "status" : "SUCCESS"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "Large_Collections",
+  "filePath" : "/home/adel/Desktop/test/gestion_emp/Large_Collections",
+  "timestamp" : [ 2025, 5, 7, 11, 52, 0, 20128108 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "Large_Collections",
+  "filePath" : "/home/adel/Desktop/test/gestion_emp/Large_Collections",
+  "timestamp" : [ 2025, 5, 7, 11, 52, 0, 20128108 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/test/gestion_emp/Daily/3-Mercredi/gestion_emp",
+  "timestamp" : [ 2025, 5, 7, 11, 54, 0, 8228655 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "location",
+  "type" : "mongo",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/test/location/Daily/3-Mercredi/location",
+  "timestamp" : [ 2025, 5, 7, 11, 54, 1, 629009984 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "Large_Collections",
+  "filePath" : "/home/adel/Desktop/test/gestion_emp/Large_Collections",
+  "timestamp" : [ 2025, 5, 7, 12, 5, 0, 15531331 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "Large_Collections",
+  "filePath" : "/home/adel/Desktop/test/gestion_emp/Large_Collections",
+  "timestamp" : [ 2025, 5, 7, 12, 5, 0, 15531331 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "Large_Collections",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 5, 7, 12, 8, 0, 14165637 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 5, 7, 12, 9, 0, 10350359 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "location",
+  "type" : "mongo",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 5, 7, 12, 9, 31, 550140794 ],
+  "status" : "FAILED"
 } ]

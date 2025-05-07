@@ -89,12 +89,12 @@ public class MailService {
         </html>
     """.formatted(dbName, dbType, frequency, errorMessage != null ? errorMessage : "Unknown error");
     }
-    public void sendBackupSummaryEmail(String to, List<DatabaseConfig> failedDatabases, int totalDatabases) {
+    public void sendBackupSummaryEmail(String to, List<DatabaseConfig> failedDatabases, int totalDatabases,String backupType) {
         try {
             int successCount = totalDatabases - failedDatabases.size();
             double successRate = (totalDatabases == 0) ? 0 : (successCount * 100.0 / totalDatabases);
 
-            String subject = String.format("%.0f%% of Backups Succeeded", successRate);
+            String subject = String.format("%.0f%% of Backups Succeeded : "+backupType, successRate);
 
             StringBuilder htmlContent = new StringBuilder();
             htmlContent.append("""
@@ -131,12 +131,12 @@ public class MailService {
             System.err.println("Failed to send backup summary email: " + e.getMessage());
         }
     }
-    public void sendRetrySummaryEmail(String to, List<DatabaseConfig> stillFailedDatabases, int initialFailedCount, int retryAttempts) {
+    public void sendRetrySummaryEmail(String to, List<DatabaseConfig> stillFailedDatabases, int initialFailedCount, int retryAttempts,String backupType) {
         try {
             int recoveredCount = initialFailedCount - stillFailedDatabases.size();
             double recoveryRate = (initialFailedCount == 0) ? 0 : (recoveredCount * 100.0 / initialFailedCount);
 
-            String subject = String.format("%.0f%% of Failed Backups Recovered", recoveryRate);
+            String subject = String.format("%.0f%% of Failed Backups Recovered : "+backupType, recoveryRate);
 
             StringBuilder htmlContent = new StringBuilder();
             htmlContent.append("""
