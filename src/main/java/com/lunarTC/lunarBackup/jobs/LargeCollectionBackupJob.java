@@ -35,10 +35,11 @@ public class LargeCollectionBackupJob implements Job {
         List<DatabaseConfig> databaseConfigs = globalConfigLoader.loadGlobalConfig().getDatabaseConfigList();
         List<DatabaseConfig> failedDatabases = new ArrayList<>();
         List<String> summaryEmailList = globalConfig.getNotificationConfig().getNotificationSummaryEmailToList();
-
+        int treatedDatabases=0;
 
         for (DatabaseConfig config : databaseConfigs) {
             if (shouldRunLargeCollections(config)) {
+                treatedDatabases++;
                 System.out.println("Running largeCollections backup for: " + config.getDatabase()+" "+ LocalDateTime.now());
                 boolean backupSucceeded = largeCollectionsBackupService.backupLargeCollections(config, "Large_Collections");
                 if (!backupSucceeded) {
@@ -53,7 +54,7 @@ public class LargeCollectionBackupJob implements Job {
         }
         if (summaryEmailList != null && !summaryEmailList.isEmpty()) {
             for (String emailTo : summaryEmailList) {
-                mailService.sendBackupSummaryEmail(emailTo, failedDatabases, databaseConfigs.size(),"Large_Collections");
+                mailService.sendBackupSummaryEmail(emailTo, failedDatabases, treatedDatabases,"Large_Collections");
             }
         }
 
