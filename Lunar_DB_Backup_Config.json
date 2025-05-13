@@ -1,5 +1,5 @@
 {
-  "pathDirectory":"/home/adel/Desktop/test",
+  "pathDirectory":"/home/adel/Desktop/zaama",
   "notificationConfig": {
     "notificationSummaryEmailToList": [
       "adelselmi8@gmail.com"
@@ -13,6 +13,44 @@
     "notificationStartTlsEnable": true
   },
   "databaseConfigList": [
+    {
+      "type": "mariadb",
+      "host": "localhost",
+      "port": 3306,
+      "username": "testuser",
+      "password": "testpass",
+      "database": "testdb",
+
+      "emailList": ["adelselmi8@gmail.com"],
+      "daily": true,
+      "weekly": false,
+      "monthly": true
+    },
+    {
+      "type": "postgres",
+      "host": "localhost",
+      "port": 5432,
+      "username": "testpguser",
+      "password": "testpgpass",
+      "database": "testpg",
+
+      "emailList": ["adelselmi8@gmail.com"],
+      "daily": true,
+      "weekly": true,
+      "monthly": false
+    },
+    {
+      "type": "mysql",
+      "host": "localhost",
+      "port": 3306,
+      "username": "root",
+      "password": "adel",
+      "database": "product",
+      "emailList": ["adelselmi8@gmail.com"],
+      "daily": true,
+      "weekly": false,
+      "monthly": true
+    },
 
 
     {

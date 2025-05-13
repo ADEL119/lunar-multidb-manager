@@ -89,11 +89,11 @@ public class DatabaseUtils {
                     case 7 -> "7-Dimanche";
                     default -> throw new IllegalArgumentException("Invalid day number");
                 };
-                yield Paths.get(basePath, config.getDatabase(), "Daily", dayName).toString();
+                yield Paths.get(basePath, config.getType(), config.getDatabase(), "Daily", dayName).toString();
             }
             case "weekly" -> {
                 int weekOfMonth = calendar.get(Calendar.WEEK_OF_MONTH);
-                yield Paths.get(basePath, config.getDatabase(), "Weekly", "Week" + weekOfMonth).toString();
+                yield Paths.get(basePath,config.getType(), config.getDatabase(), "Weekly", "Week" + weekOfMonth).toString();
             }
             case "monthly" -> {
                 int month = calendar.get(Calendar.MONTH) + 1;
@@ -112,9 +112,9 @@ public class DatabaseUtils {
                     case 12 -> "12-Décembre";
                     default -> throw new IllegalArgumentException("Invalid month number");
                 };
-                yield Paths.get(basePath, "Monthly", monthName).toString();
+                yield Paths.get(basePath,config.getType(), "Monthly", monthName).toString();
             }
-            default -> Paths.get(basePath, config.getDatabase(), frequency).toString();
+            default -> Paths.get(basePath,config.getType(), config.getDatabase(), frequency).toString();
         };
     }
 }
