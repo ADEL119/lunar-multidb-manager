@@ -390,4 +390,123 @@
   "filePath" : "/home/adel/Desktop/zaama/mongo/location/Daily/1-Lundi/location",
   "timestamp" : [ 2025, 5, 12, 12, 29, 7, 180333084 ],
   "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "Manual",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 5, 13, 11, 32, 40, 983973017 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testpg",
+  "type" : "postgres",
+  "frequency" : "Manual",
+  "filePath" : "/home/adel/Desktop/zaama/postgres/testpg/Manual/testpg.backup",
+  "timestamp" : [ 2025, 5, 13, 11, 32, 43, 335217955 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "product",
+  "type" : "mysql",
+  "frequency" : "Manual",
+  "filePath" : "/home/adel/Desktop/zaama/mysql/product/Manual/product.sql",
+  "timestamp" : [ 2025, 5, 13, 11, 32, 45, 685057895 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "Manual",
+  "filePath" : "/home/adel/Desktop/zaama/mongo/gestion_emp/Manual/gestion_emp",
+  "timestamp" : [ 2025, 5, 13, 11, 32, 47, 625650612 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "location",
+  "type" : "mongo",
+  "frequency" : "Manual",
+  "filePath" : "/home/adel/Desktop/zaama/mongo/location/Manual/location",
+  "timestamp" : [ 2025, 5, 13, 11, 32, 49, 836009472 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 5, 13, 12, 29, 0, 53384235 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "testpg",
+  "type" : "postgres",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/zaama/postgres/testpg/Daily/2-Mardi/testpg.backup",
+  "timestamp" : [ 2025, 5, 13, 12, 29, 2, 741335851 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "product",
+  "type" : "mysql",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/zaama/mysql/product/Daily/2-Mardi/product.sql",
+  "timestamp" : [ 2025, 5, 13, 12, 29, 4, 800838719 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/zaama/mongo/gestion_emp/Daily/2-Mardi/gestion_emp",
+  "timestamp" : [ 2025, 5, 13, 12, 29, 8, 55622710 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "location",
+  "type" : "mongo",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/zaama/mongo/location/Daily/2-Mardi/location",
+  "timestamp" : [ 2025, 5, 13, 12, 29, 9, 795550948 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testdb",
+  "type" : "mariadb",
+  "frequency" : "daily",
+  "filePath" : "N/A",
+  "timestamp" : [ 2025, 5, 15, 14, 12, 12, 630598434 ],
+  "status" : "FAILED"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "Large_Collections",
+  "filePath" : "/home/adel/Desktop/reunion/mongo/gestion_emp/Large_Collections",
+  "timestamp" : [ 2025, 5, 15, 14, 12, 12, 637314332 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "testpg",
+  "type" : "postgres",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/reunion/postgres/testpg/Daily/4-Jeudi/testpg.backup",
+  "timestamp" : [ 2025, 5, 15, 14, 12, 12, 738892371 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "product",
+  "type" : "mysql",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/reunion/mysql/product/Daily/4-Jeudi/product.sql",
+  "timestamp" : [ 2025, 5, 15, 14, 12, 13, 250003810 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/reunion/mongo/gestion_emp/Daily/4-Jeudi/gestion_emp",
+  "timestamp" : [ 2025, 5, 15, 14, 12, 13, 314832173 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "location",
+  "type" : "mongo",
+  "frequency" : "daily",
+  "filePath" : "/home/adel/Desktop/reunion/mongo/location/Daily/4-Jeudi/location",
+  "timestamp" : [ 2025, 5, 15, 14, 12, 13, 345702670 ],
+  "status" : "SUCCESS"
+}, {
+  "databaseName" : "gestion_emp",
+  "type" : "mongo",
+  "frequency" : "Large_Collections",
+  "filePath" : "/home/adel/Desktop/reunion/mongo/gestion_emp/Large_Collections",
+  "timestamp" : [ 2025, 5, 15, 14, 12, 12, 637314332 ],
+  "status" : "SUCCESS"
 } ]
