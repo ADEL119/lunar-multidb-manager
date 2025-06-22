@@ -88,6 +88,7 @@ public class DynamicSchedulerController {
             e.printStackTrace();
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
                     .body("Failed to schedule dynamic backup: " + e.getMessage());
+
         }
     }
 
