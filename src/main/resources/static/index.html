@@ -120,10 +120,26 @@
     <h2 class="text-center mb-4 text-warning-emphasis fw-bold d-flex justify-content-center align-items-center gap-2">
         <i class="bi bi-arrow-clockwise"></i> Restore Control Panel
     </h2>
-    <div class="text-center">
-        <p class="lead">🛠️ Restore feature is coming soon. Stay tuned!</p>
+
+    <div class="table-responsive mt-4">
+        <table id="restoreTable" class="table table-hover table-bordered text-center">
+            <thead class="table-warning">
+            <tr>
+                <th>Type</th>
+                <th>DatabaseName</th>
+                <th>Host</th>
+                <th>Port</th>
+                <th>Username</th>
+                <th>Password</th>
+                <th>DataSource</th>
+                <th>Button</th>
+            </tr>
+            </thead>
+            <tbody id="restoreTableBody"></tbody>
+        </table>
     </div>
 </div>
+
 
 <!-- Footer -->
 <footer class="bg-light text-center text-muted py-3 shadow-sm mt-5">
@@ -134,17 +150,6 @@
 <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
 <script src="js/app.js"></script>
-<script>
-    function showBackupPanel() {
-        document.getElementById('backupPanel').classList.remove('d-none');
-        document.getElementById('restorePanel').classList.add('d-none');
-        document.getElementById('backupPanel').scrollIntoView({ behavior: 'smooth' });
-    }
-    function showRestorePanel() {
-        document.getElementById('restorePanel').classList.remove('d-none');
-        document.getElementById('backupPanel').classList.add('d-none');
-        document.getElementById('restorePanel').scrollIntoView({ behavior: 'smooth' });
-    }
-</script>
+
 </body>
 </html>

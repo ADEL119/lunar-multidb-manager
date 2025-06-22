@@ -16,7 +16,7 @@ public class GlobalConfigLoader {
     public GlobalConfig loadGlobalConfig() {
         try {
             File jarDir = new File(Paths.get("").toAbsolutePath().toString());
-            File configFile = new File(jarDir, "config.json");
+            File configFile = new File(jarDir, "Lunar_DB_Backup_Config.json");
 
             if (!configFile.exists()) {
                 throw new RuntimeException("Configuration file not found: " + configFile.getAbsolutePath());

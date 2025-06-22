@@ -3,6 +3,7 @@ package com.lunarTC.lunarBackup.controllers;
 import com.lunarTC.lunarBackup.models.BackupReport;
 import com.lunarTC.lunarBackup.services.BackupReportService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -15,12 +16,14 @@ public class BackupReportController {
     private BackupReportService backupReportService;
 
     @GetMapping
-    public List<BackupReport> getAllReports() {
-        return backupReportService.getAllReports();
+    public ResponseEntity<List<BackupReport>> getAllReports() {
+        List<BackupReport> reports=backupReportService.getAllReports();
+        return ResponseEntity.ok(reports);
     }
 
     @GetMapping("/success")
-    public List<BackupReport> getSuccessfulReports(){
-        return backupReportService.getSuccessfulReports();
+    public ResponseEntity<List<BackupReport>> getSuccessfulReports(){
+        List<BackupReport> successfulReports=backupReportService.getAllReports();
+        return ResponseEntity.ok(successfulReports);
     }
 }

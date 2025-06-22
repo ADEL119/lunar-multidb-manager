@@ -26,7 +26,7 @@ public class RestoreService {
                             "-P", String.valueOf(config.getPort()),
                             "-u", config.getUsername(),
                             "-p" + config.getPassword(),
-                            config.getDatabaseName()
+                            config.getDatabase()
                     );
                     processBuilder.redirectInput(new File(backupSource));
                     break;
@@ -39,7 +39,7 @@ public class RestoreService {
                             "-h", config.getHost(),
                             "-p", String.valueOf(config.getPort()),
                             "-U", config.getUsername(),
-                            "-d", config.getDatabaseName(),
+                            "-d", config.getDatabase(),
                             "-c",  // Clean before restore
                             backupSource
                     );
@@ -56,7 +56,7 @@ public class RestoreService {
                             "-u", config.getUsername(),
                             "-p", config.getPassword(),
                             "--authenticationDatabase", config.getAuthenticationDatabase(),
-                            "--db", config.getDatabaseName(),
+                            "--db", config.getDatabase(),
                             "--drop",
                             backupSource
                     );

@@ -65,7 +65,7 @@ public abstract class AbstractBackupJob implements Job {
 
         if (summaryEmailList != null && !summaryEmailList.isEmpty()) {
             for (String emailTo : summaryEmailList) {
-                mailService.sendBackupSummaryEmail(emailTo, failedDatabases, databaseConfigs.size());
+                mailService.sendBackupSummaryEmail(emailTo, failedDatabases, databaseConfigs.size(),getBackupType());
             }
         }
 
@@ -74,7 +74,7 @@ public abstract class AbstractBackupJob implements Job {
 
             try {
                 System.out.println("There are " + failedDatabases.size() + " databases,retry them after 1 hour ");
-                Thread.sleep(1000); //1 hour
+                Thread.sleep(3600000); //1 hour
             } catch (InterruptedException e) {
                 throw new RuntimeException("Retry sleep interrupted", e);
             }
@@ -82,7 +82,7 @@ public abstract class AbstractBackupJob implements Job {
             int initialFailedCount = failedDatabases.size();
 
 
-            while (!failedDatabases.isEmpty() && tries < 3) {
+            while (!failedDatabases.isEmpty() && tries < 10) {
 
                 System.out.println("Retry number " + (tries + 1) + " for failed databases");
 
@@ -92,7 +92,7 @@ public abstract class AbstractBackupJob implements Job {
                     if (shouldRunBackup(config)) {
 
 
-                        System.out.println("Retry: " + getBackupType() + "   :" + config.getDatabaseName() + " ======> " + config.getType());
+                        System.out.println("Retry: " + getBackupType() + "   :" + config.getDatabase() + " ======> " + config.getType());
                         boolean backupSucceeded = backupService.backupDatabase(config, getBackupType());
                         if (backupSucceeded) {
                             iterator.remove();
@@ -106,7 +106,7 @@ public abstract class AbstractBackupJob implements Job {
                 }
                 tries++;
                 try {
-                    Thread.sleep(1000); //1 hour
+                    Thread.sleep(1800000); //30 minutes
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }
@@ -115,7 +115,7 @@ public abstract class AbstractBackupJob implements Job {
             }
             if (summaryEmailList != null && !summaryEmailList.isEmpty()) {
                 for (String emailTo : summaryEmailList) {
-                    mailService.sendRetrySummaryEmail(emailTo, failedDatabases, initialFailedCount, tries);
+                    mailService.sendRetrySummaryEmail(emailTo, failedDatabases, initialFailedCount, tries,getBackupType());
                 }
             }
 

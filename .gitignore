@@ -5,7 +5,6 @@ target/
 !**/src/test/**/target/
 backup_reports.txt
 Lunar_DB_Backup_Config.json
-
 ### STS ###
 .apt_generated
 .classpath
