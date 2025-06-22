@@ -14,11 +14,83 @@ function showBackupPanel() {
 }
 
 function showRestorePanel() {
+  console.log("Showing restore panel...");
   const panel = document.getElementById('restorePanel');
   panel.classList.remove('d-none');
   document.getElementById('backupPanel').classList.add('d-none');
   panel.scrollIntoView({ behavior: 'smooth' });
+  loadRestoreConfigs();
 }
+
+function loadRestoreConfigs() {
+  console.log("Fetching restore configs...");
+  fetch('/api/config/getAll')
+    .then(res => {
+      console.log('Response received:', res);
+      return res.json();
+    })
+    .then(data => {
+      console.log('Parsed data:', data);
+      const tbody = document.getElementById('restoreTableBody');
+      tbody.innerHTML = ''; // Clear previous
+
+      data.forEach((cfg, index) => {
+        const row = document.createElement('tr');
+
+        // Give each input a unique ID based on index
+        const inputId = `dataSource-${index}`;
+
+        row.innerHTML = `
+          <td>${cfg.type || '-'}</td>
+          <td>${cfg.database || '-'}</td>
+          <td>${cfg.host || '-'}</td>
+          <td>${cfg.port || '-'}</td>
+          <td>${cfg.username || '-'}</td>
+          <td>${cfg.password || '-'}</td>
+          <td>
+            <input type="text" id="${inputId}" class="form-control form-control-sm" placeholder="Enter file path">
+          </td>
+          <td>
+            <button class="btn btn-sm btn-warning" onclick="restoreDatabase('${cfg.database}', '${cfg.type}', '${inputId}')">
+              <i class="bi bi-arrow-clockwise"></i> Restore
+            </button>
+          </td>
+        `;
+        tbody.appendChild(row);
+      });
+    })
+    .catch(error => {
+      console.error('Restore config loading error:', error);
+      alert('Failed to load restore configurations: ' + error.message);
+    });
+}
+
+function restoreDatabase(dbName, dbType, inputId) {
+  const dataSource = document.getElementById(inputId).value.trim();
+
+  if (!dataSource) {
+    alert("Please enter a backup file path.");
+    return;
+  }
+
+  const encodedDataSource = encodeURIComponent(dataSource); // Important to safely pass file path in URL
+
+  const url = `/api/restore/${dbName}/${dbType}?dataSource=${encodedDataSource}`;
+  console.log('Calling restore endpoint:', url);
+
+  fetch(url, { method: 'GET' })
+    .then(res => res.text())
+    .then(msg => {
+      alert(msg);
+    })
+    .catch(error => {
+      console.error('Restore error:', error);
+      alert('Failed to restore: ' + error.message);
+    });
+}
+
+
+
 
 function toggleReportTable() {
   const reportSection = document.getElementById('reportSection');

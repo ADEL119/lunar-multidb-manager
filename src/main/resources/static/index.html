@@ -120,10 +120,26 @@
     <h2 class="text-center mb-4 text-warning-emphasis fw-bold d-flex justify-content-center align-items-center gap-2">
         <i class="bi bi-arrow-clockwise"></i> Restore Control Panel
     </h2>
-    <div class="text-center">
-        <p class="lead">🛠️ Restore feature is coming soon. Stay tuned!</p>
+
+    <div class="table-responsive mt-4">
+        <table id="restoreTable" class="table table-hover table-bordered text-center">
+            <thead class="table-warning">
+            <tr>
+                <th>Type</th>
+                <th>DatabaseName</th>
+                <th>Host</th>
+                <th>Port</th>
+                <th>Username</th>
+                <th>Password</th>
+                <th>DataSource</th>
+                <th>Button</th>
+            </tr>
+            </thead>
+            <tbody id="restoreTableBody"></tbody>
+        </table>
     </div>
 </div>
+
 
 <!-- Footer -->
 <footer class="bg-light text-center text-muted py-3 shadow-sm mt-5">
