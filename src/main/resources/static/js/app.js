@@ -32,16 +32,25 @@ function loadRestoreConfigs() {
     .then(data => {
       console.log('Parsed data:', data);
       const tbody = document.getElementById('restoreTableBody');
-      tbody.innerHTML = ''; // Clear previous
+      tbody.innerHTML = '';
+
+      // Map lowercase types to icons
+      const typeIcons = {
+        "mongo": '<img src="img/mongodb.png" alt="MongoDB" width="100" title="MongoDB">',
+        "mysql": '<img src="img/mysql.png" alt="MySQL" width="100" title="MySQL">',
+        "mariadb": '<img src="img/mariadb.png" alt="MariaDB" width="100" title="MariaDB">',
+        "postgres": '<img src="img/postgresql.png" alt="PostgreSQL" width="100" title="PostgreSQL">'
+      };
 
       data.forEach((cfg, index) => {
         const row = document.createElement('tr');
-
-        // Give each input a unique ID based on index
         const inputId = `dataSource-${index}`;
 
+        const dbType = (cfg.type || '').toLowerCase();  // Ensure it's lowercase
+        const typeIcon = typeIcons[dbType] || cfg.type || '-';  // Fallback to text if unknown
+
         row.innerHTML = `
-          <td>${cfg.type || '-'}</td>
+          <td class="text-center">${typeIcon}</td>
           <td>${cfg.database || '-'}</td>
           <td>${cfg.host || '-'}</td>
           <td>${cfg.port || '-'}</td>
@@ -64,6 +73,7 @@ function loadRestoreConfigs() {
       alert('Failed to load restore configurations: ' + error.message);
     });
 }
+
 
 function restoreDatabase(dbName, dbType, inputId) {
   const dataSource = document.getElementById(inputId).value.trim();
