@@ -6,6 +6,7 @@ import com.lunarTC.lunarBackup.models.GlobalConfig;
 import com.lunarTC.lunarBackup.services.BackupService;
 import com.lunarTC.lunarBackup.services.MailService;
 import org.quartz.Job;
+import org.quartz.JobDataMap;
 import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,6 +28,9 @@ public abstract class AbstractBackupJob implements Job {
 
     @Override
     public void execute(JobExecutionContext context) throws JobExecutionException {
+
+        beforeBackupExecution(context);
+        JobDataMap dataMap = context.getJobDetail().getJobDataMap();
 
 
         GlobalConfig globalConfig = globalConfigLoader.loadGlobalConfig();
@@ -125,6 +129,7 @@ public abstract class AbstractBackupJob implements Job {
 
     }
 
+    protected void beforeBackupExecution(JobExecutionContext context) {}
 
     protected abstract boolean shouldRunBackup(DatabaseConfig config);
 
