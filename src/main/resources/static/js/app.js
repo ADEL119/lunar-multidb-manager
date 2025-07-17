@@ -1,5 +1,16 @@
 let currentConfig = {}; // Store full config globally
 
+function isValidQuartzCron(cron) {
+  const parts = cron.trim().split(/\s+/);
+  if (parts.length !== 6 && parts.length !== 7) return false;
+
+  const validPattern = /^[\d*/,\-LW#?]+$/;
+
+  return parts.every(part => validPattern.test(part));
+}
+
+
+
 // Enhanced Toast Notification System
 function showToast(message, type = 'info') {
   const toastElement = document.getElementById('backupToast');
@@ -149,7 +160,7 @@ function triggerBackupNow() {
   fetch('/api/scheduler/backup-now', { method: 'POST' })
     .then(res => res.text())
     .then(msg => {
-      showToast(`Backup initiated successfully: ${msg}`, 'success');
+      showToast(` ${msg}`, 'success');
       loadBackupReports();
     })
     .catch(error => {
@@ -166,6 +177,11 @@ function scheduleBackup(event) {
   event.preventDefault();
   const cron = document.getElementById('cronExpression').value;
   const label = document.getElementById('frequencyLabel').value;
+
+  if (!isValidQuartzCron(cron)) {
+    showToast("⛔ Expression CRON invalide. Utilise le format Quartz (6 ou 7 champs).", 'error');
+    return;
+  }
 
   // Show processing state
   const submitBtn = event.target.querySelector('button[type="submit"]');
@@ -418,7 +434,7 @@ function addNewDatabase() {
   modal.show();
 }
 
-function handleNewDatabaseSubmit(event) {
+async function handleNewDatabaseSubmit(event) {
   event.preventDefault();
 
   const newDb = {
@@ -441,28 +457,45 @@ function handleNewDatabaseSubmit(event) {
   const submitBtn = event.target.querySelector('button[type="submit"]');
   const originalBtnText = submitBtn.innerHTML;
   submitBtn.disabled = true;
-  submitBtn.innerHTML = `<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Adding...`;
+  submitBtn.innerHTML = `<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Checking...`;
 
-  fetch('/api/config/update/add-database', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(newDb)
-  })
-    .then(res => {
-      if (!res.ok) throw new Error('Failed to add database');
-      return res.json();
-    })
-    .then(updatedConfig => {
-      currentConfig = updatedConfig;
-      renderDatabaseConfigCards();
-      bootstrap.Modal.getInstance(document.getElementById('newDatabaseModal')).hide();
-      showToast('Database added successfully!', 'success');
-    })
-    .catch(err => showToast('Error: ' + err.message, 'error'))
-    .finally(() => {
-      submitBtn.disabled = false;
-      submitBtn.innerHTML = originalBtnText;
+  try {
+    // First check if database already exists
+    const checkResponse = await fetch('/api/config/update/check-database-exists', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(newDb)
     });
+
+    if (!checkResponse.ok) throw new Error('Failed to check database existence');
+
+    const dbExists = await checkResponse.json();
+    if (dbExists) {
+      throw new Error('Database  already exists');
+    }
+
+    // If doesn't exist, proceed with adding
+    submitBtn.innerHTML = `<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Adding...`;
+
+    const addResponse = await fetch('/api/config/update/add-database', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(newDb)
+    });
+
+    if (!addResponse.ok) throw new Error('Failed to add database');
+
+    const updatedConfig = await addResponse.json();
+    currentConfig = updatedConfig;
+    renderDatabaseConfigCards();
+    bootstrap.Modal.getInstance(document.getElementById('newDatabaseModal')).hide();
+    showToast('Database added successfully!', 'success');
+  } catch (err) {
+    showToast('Error: ' + err.message, 'error');
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.innerHTML = originalBtnText;
+  }
 }
 
 function renderDatabaseConfigCards() {

@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 @RestController
 @RequestMapping("/api/config/update")
@@ -48,4 +49,33 @@ public class GlobalConfigController {
 
         return config;
     }
+
+    // Add this to your GlobalConfigController.java
+
+    @PostMapping("/check-database-exists")
+    public boolean checkDatabaseExists(@RequestBody DatabaseConfig dbToCheck) {
+        GlobalConfig config = configLoader.loadGlobalConfig();
+
+        if (config.getDatabaseConfigList() == null || config.getDatabaseConfigList().isEmpty()) {
+            return false;
+        }
+
+        return config.getDatabaseConfigList().stream().anyMatch(existingDb -> {
+            // Short name match (safe null checks)
+            boolean shortNameMatch = safeEqualsIgnoreCase(existingDb.getShortName(), dbToCheck.getShortName());
+
+            // Connection match (host, port, database)
+            boolean connectionMatch =
+                    safeEqualsIgnoreCase(existingDb.getHost(), dbToCheck.getHost()) &&
+                            Objects.equals(existingDb.getPort(), dbToCheck.getPort()) &&
+                            safeEqualsIgnoreCase(existingDb.getDatabase(), dbToCheck.getDatabase());
+
+            return shortNameMatch || connectionMatch;
+        });
+    }
+    private boolean safeEqualsIgnoreCase(String s1, String s2) {
+        return s1 != null && s2 != null && s1.equalsIgnoreCase(s2);
+    }
+
+
 }
