@@ -86,7 +86,7 @@ public abstract class AbstractBackupJob implements Job {
             int initialFailedCount = failedDatabases.size();
 
 
-            while (!failedDatabases.isEmpty() && tries < 10) {
+            while (!failedDatabases.isEmpty() && tries < 3) {
 
                 System.out.println("Retry number " + (tries + 1) + " for failed databases");
 

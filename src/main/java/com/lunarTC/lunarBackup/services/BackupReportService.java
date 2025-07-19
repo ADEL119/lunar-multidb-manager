@@ -56,18 +56,17 @@ public class BackupReportService {
         if (reportFile.exists()) {
             try {
                 List<BackupReport> loaded = mapper.readValue(reportFile, new TypeReference<>() {});
-//                List<BackupReport> loaded1 = new ArrayList<>();
-//                for(int i  = loaded.size();i>0;i--){
-//                    if(loaded1.size()<100) {
-//
-//                        loaded1.add(loaded.get(i - 1));
-//
-//                    }
-//                }
+
                 reports.addAll(loaded);
             } catch (IOException e) {
                 System.err.println("Failed to load backup reports: " + e.getMessage());
             }
         }
     }
+
+    public void clearReports() {
+        reports.clear();
+        saveReportsToFile();  // Ensure file is also cleared
+    }
+
 }

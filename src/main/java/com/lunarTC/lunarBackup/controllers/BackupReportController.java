@@ -26,4 +26,17 @@ public class BackupReportController {
         List<BackupReport> successfulReports=backupReportService.getAllReports();
         return ResponseEntity.ok(successfulReports);
     }
+
+    @DeleteMapping("/clear")
+    public ResponseEntity<String> clearReports() {
+        try {
+            backupReportService.clearReports();
+            return ResponseEntity.ok("Backup report history cleared.");
+        } catch (Exception e) {
+            return ResponseEntity
+                    .status(500)
+                    .body("Failed to clear backup reports: " + e.getMessage());
+        }
+    }
+
 }

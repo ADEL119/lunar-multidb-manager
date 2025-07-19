@@ -271,7 +271,7 @@ function loadGlobalConfig() {
 
       (config.databaseConfigList || []).forEach((db, index) => {
         const dbCard = document.createElement('div');
-        dbCard.className = 'card mb-3 shadow-sm';
+        dbCard.className = 'card db-config-card';
         dbCard.innerHTML = `
           <div class="card-body">
             <h5 class="card-title text-primary">Database #${index + 1}</h5>
@@ -394,6 +394,7 @@ function submitGlobalConfig(event) {
     });
 }
 
+
 function deleteDatabase(index) {
   // Confirm deletion with user
   if (!confirm('Are you sure you want to delete this database configuration?')) {
@@ -504,7 +505,7 @@ function renderDatabaseConfigCards() {
 
   (currentConfig.databaseConfigList || []).forEach((db, index) => {
     const dbCard = document.createElement('div');
-    dbCard.className = 'card mb-3 shadow-sm';
+    dbCard.className = 'card db-config-card';
     dbCard.innerHTML = `
       <div class="card-body">
         <h5 class="card-title text-primary">Database #${index + 1}</h5>
@@ -603,3 +604,49 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 window.addEventListener('load', loadBackupReports);
+
+function clearBackupHistory() {
+  if (!confirm("Are you sure you want to clear all backup history? This action cannot be undone.")) return;
+
+  fetch('/api/reports/clear', {
+    method: 'DELETE'
+  })
+    .then(res => {
+      if (!res.ok) {
+        return res.text().then(msg => { throw new Error(msg); });
+      }
+      return res.text();
+    })
+    .then(msg => {
+      showToast(msg, 'success');
+      loadBackupReports(); // Refresh table
+    })
+    .catch(error => {
+      console.error('Clear history error:', error);
+      showToast('Failed to clear history: ' + error.message, 'error');
+    });
+}
+
+
+
+function confirmClearHistory() {
+  fetch('/api/reports/clear', { method: 'DELETE' })
+    .then(res => {
+      if (!res.ok) {
+        return res.text().then(msg => { throw new Error(msg); });
+      }
+      return res.text();
+    })
+    .then(msg => {
+      showToast(msg, 'success');
+      loadBackupReports(); // Refresh report table
+
+      // Hide modal
+      const modal = bootstrap.Modal.getInstance(document.getElementById('clearHistoryModal'));
+      modal.hide();
+    })
+    .catch(error => {
+      console.error('Error clearing history:', error);
+      showToast('Failed to clear history: ' + error.message, 'error');
+    });
+}
