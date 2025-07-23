@@ -78,7 +78,7 @@ public abstract class AbstractBackupJob implements Job {
 
             try {
                 System.out.println("There are " + failedDatabases.size() + " databases,retry them after 1 hour ");
-                Thread.sleep(3600000); //1 hour
+                Thread.sleep(1); //3600000
             } catch (InterruptedException e) {
                 throw new RuntimeException("Retry sleep interrupted", e);
             }
@@ -110,7 +110,7 @@ public abstract class AbstractBackupJob implements Job {
                 }
                 tries++;
                 try {
-                    Thread.sleep(1800000); //30 minutes
+                    Thread.sleep(1); //30 minutes   //1800000
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }

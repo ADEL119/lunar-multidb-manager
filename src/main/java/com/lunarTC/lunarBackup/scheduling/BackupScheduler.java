@@ -23,7 +23,7 @@ public class BackupScheduler {
     @PostConstruct
     public void schedulePredefinedBackups() throws SchedulerException {
         // Daily at 1AM
-        scheduleBackup(DailyBackupJob.class, "daily", "0 29 12 * * ?");
+        scheduleBackup(DailyBackupJob.class, "daily", "0 03 21 * * ?");
 
         // Saturday at 4AM
         scheduleBackup(WeeklyBackupJob.class, "weekly", "0 0 4 ? * SAT");
