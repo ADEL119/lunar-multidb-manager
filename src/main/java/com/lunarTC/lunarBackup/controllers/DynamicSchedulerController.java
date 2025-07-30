@@ -1,6 +1,7 @@
 package com.lunarTC.lunarBackup.controllers;
 
 import com.lunarTC.lunarBackup.configs.GlobalConfigLoader;
+import com.lunarTC.lunarBackup.jobs.DynamicBackupJob;
 import com.lunarTC.lunarBackup.models.DatabaseConfig;
 import com.lunarTC.lunarBackup.models.DynamicCronRequest;
 import com.lunarTC.lunarBackup.models.GlobalConfig;
@@ -78,11 +79,13 @@ public class DynamicSchedulerController {
     @PostMapping("/schedule-dynamic")
     public ResponseEntity<String> scheduleDynamicCronBackup(@RequestBody DynamicCronRequest request) {
         try {
-            List<DatabaseConfig> configs = globalConfigLoader.loadGlobalConfig().getDatabaseConfigList();
-            for (DatabaseConfig config : configs) {
+//            List<DatabaseConfig> configs = globalConfigLoader.loadGlobalConfig().getDatabaseConfigList();
+//            for (DatabaseConfig config : configs) {
+//
+//                backupScheduler.scheduleDynamicBackupJob(scheduler, config, request.getCronExpression(), request.getFrequencyLabel());
+//            }
+            backupScheduler.scheduleBackup(DynamicBackupJob.class, request.getFrequencyLabel(), request.getCronExpression());
 
-                backupScheduler.scheduleDynamicBackupJob(scheduler, config, request.getCronExpression(), request.getFrequencyLabel());
-            }
             return ResponseEntity.ok("Dynamic backup jobs scheduled with cron: " + request.getCronExpression());
         } catch (Exception e) {
             e.printStackTrace();

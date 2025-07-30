@@ -23,7 +23,7 @@ public class BackupScheduler {
     @PostConstruct
     public void schedulePredefinedBackups() throws SchedulerException {
         // Daily at 1AM
-        scheduleBackup(DailyBackupJob.class, "daily", "0 03 21 * * ?");
+        scheduleBackup(DailyBackupJob.class, "daily", "0 22 22 * * ?");
 
         // Saturday at 4AM
         scheduleBackup(WeeklyBackupJob.class, "weekly", "0 0 4 ? * SAT");
@@ -36,9 +36,13 @@ public class BackupScheduler {
     }
 
 
-        private void scheduleBackup(Class<? extends Job> jobClass, String frequency, String cronExpression) throws SchedulerException {
+    public void scheduleBackup(Class<? extends Job> jobClass, String frequency, String cronExpression) throws SchedulerException {
+        JobDataMap dataMap = new JobDataMap();
+        dataMap.put("frequency", frequency); // 👈 this line is the key!
+
         JobDetail jobDetail = JobBuilder.newJob(jobClass)
                 .withIdentity(frequency + "_backup")
+                .usingJobData(dataMap) // 👈 pass it here
                 .build();
 
         Trigger trigger = TriggerBuilder.newTrigger()
@@ -48,6 +52,7 @@ public class BackupScheduler {
 
         scheduler.scheduleJob(jobDetail, trigger);
     }
+
     public void scheduleDynamicBackupJob(Scheduler scheduler, DatabaseConfig config, String cronExpression, String frequency) throws SchedulerException {
         JobDataMap dataMap = new JobDataMap();
         dataMap.put("databaseConfig", config);
